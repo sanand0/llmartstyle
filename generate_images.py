@@ -67,9 +67,9 @@ def main() -> None:
             pbar = tqdm(cfg["styles"], desc=f"{model_name} - {image['id']}")
             for style in pbar:
                 out = image_root / f"{image['id']}.{style['id']}.{model_name}.png"
+                pbar.set_postfix_str(style["id"])
                 if out.exists():
                     continue
-                pbar.set_postfix_str(style["id"])
                 prompt = f"{image['prompt']}\nStyle: {style['prompt']}"
                 png_bytes = generator(prompt)
                 out.write_bytes(png_bytes)

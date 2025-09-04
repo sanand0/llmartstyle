@@ -141,6 +141,81 @@
       "name": "Psychedelic Retro Poster ('60s)",
       "id": "psychedelic-retro-poster-60s",
       "prompt": "Draw a 1960s-style psychedelic poster, swirling saturated gradients, bold lettering forms, and subtle film-grain texture."
+    },
+    {
+      "name": "Quantum Flux Patterns",
+      "id": "quantum-flux-patterns",
+      "prompt": "Draw in a quantum-inspired style, with probabilistic wave-like forms, shimmering particle trails, and dynamic interference patterns that shift with perspective."
+    },
+    {
+      "name": "Bioplastic Morphic Layers",
+      "id": "bioplastic-morphic-layers",
+      "prompt": "Draw with translucent, organic bioplastic layers, fluid cellular structures, and soft bioluminescent gradients that mimic living tissue."
+    },
+    {
+      "name": "Glitchtopian Relics",
+      "id": "glitchtopian-relics",
+      "prompt": "Draw as fragmented digital artifacts, with pixelated decay, corrupted data shards, and neon glitches forming futuristic relics."
+    },
+    {
+      "name": "Aerochromatic Flux",
+      "id": "aerochromatic-flux",
+      "prompt": "Draw with iridescent, prismatic color shifts, fluid metallic sheens, and aerodynamic contours that evoke weightless energy flows."
+    },
+    {
+      "name": "Neural Tapestry Weave",
+      "id": "neural-tapestry-weave",
+      "prompt": "Draw as a neural network-inspired tapestry, with interconnected nodal threads, synaptic pulses, and evolving fractal patterns in muted tones."
+    },
+    {
+      "name": "The Bengal School of Art",
+      "id": "bengal-school-of-art",
+      "prompt": "Draw in the Bengal School of Art style, with delicate Japanese wash watercolor layers, soft dreamlike atmospheres, sombre muted palettes, refined linear figures, and flattened miniature-inspired perspectives depicting mystical or symbolic scenes."
+    },
+    {
+      "name": "Africobra",
+      "id": "africobra",
+      "prompt": "Draw in Africobra style, with vibrant coolade colors, rhythmic interlocking patterns, bold text and imagery, and powerful depictions of Black identity, community, and pride infused with positive energy."
+    },
+    {
+      "name": "Stridentism (Estridentismo)",
+      "id": "stridentism",
+      "prompt": "Draw in Stridentism style, with dynamic fragmented lines, urban-industrial motifs like skyscrapers, machines, airplanes, and telegraph cables, woodcut-like bold contrasts, and irreverent, energetic compositions celebrating modernity and revolution."
+    },
+    {
+      "name": "Gutai Group",
+      "id": "gutai-group",
+      "prompt": "Draw in Gutai Group style, emphasizing raw energy, explosive splatters, smeared textures, gouges, drips, and unconventional materials, capturing the physical force and bodily movement of performance-based creation."
+    },
+    {
+      "name": "Ebru (Turkish Paper Marbling)",
+      "id": "ebru",
+      "prompt": "Draw in Ebru marbling style, with floating pigments on liquid, combed into swirling veins, concentric organic forms, bleeding edges, and fluid unpredictable patterns resembling marble, smoke, or water."
+    },
+    {
+      "name": "Pysanka Symbology",
+      "id": "pysanka-symbology",
+      "prompt": "Draw in Pysanka style, with geometric wax-resist motifs, suns, stars, trees of life, birds, and eternity bands, structured into symmetrical sections, using symbolic colors like red, black, yellow, and green for dense talismanic patterns."
+    },
+    {
+      "name": "Lowbrow (Pop Surrealism)",
+      "id": "lowbrow-pop-surrealism",
+      "prompt": "Draw in Lowbrow Pop Surrealism style, with polished classical painting techniques applied to playful or grotesque cartoon-like characters, surreal juxtapositions, kitsch pop-culture icons, and satirical, humorous undertones."
+    },
+    {
+      "name": "Algorithmic Beauty (Fractal Art)",
+      "id": "fractal-art",
+      "prompt": "Draw in fractal art style, with infinitely recursive geometric spirals, self-similar branching forms, organic mathematical patterns, and intricate details resembling galaxies, coastlines, snowflakes, or tree growth."
+    },
+    {
+      "name": "Vaporwave Aesthetics",
+      "id": "vaporwave",
+      "prompt": "Draw in Vaporwave style, with pastel pink and blue gradients, retro computer graphics, VHS glitch textures, Greco-Roman statues, obsolete 90s UI elements, palm trees, Japanese text, and a melancholic nostalgic mood."
+    },
+    {
+      "name": "Risograph Texture",
+      "id": "risograph-texture",
+      "prompt": "Draw in Risograph style, with limited vibrant spot colors, overprinted layers creating unexpected blends, halftone grainy textures, and charming imperfections like misaligned color registration and uneven ink coverage."
     }
   ]
 }
