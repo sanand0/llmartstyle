@@ -30,17 +30,12 @@ const header = html` <div class="d-flex align-items-stretch border-bottom bg-bod
 </div>`;
 
 const rows = cfg.styles.map((style) => {
-  return html` <div class="d-flex align-items-start border-bottom bg-white">
+  return html` <div class="d-flex align-items-start border-bottom">
     <div class="p-3" style="width: 300px">
       <div class="fw-semibold">${style.name}</div>
       <div class="small text-body-secondary">${style.prompt}</div>
       <button class="btn btn-sm btn-outline-secondary mt-2" title="Copy prompt" @click=${() => onCopy(style.prompt)}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M4 1.5H10.5V3H5.5C4.671 3 4 3.671 4 4.5V11H2.5V3A1.5 1.5 0 0 1 4 1.5Z" />
-          <path
-            d="M6 4.5A1.5 1.5 0 0 1 7.5 3h5A1.5 1.5 0 0 1 14 4.5v8A1.5 1.5 0 0 1 12.5 14h-5A1.5 1.5 0 0 1 6 12.5v-8Z"
-          />
-        </svg>
+        <i class="bi bi-clipboard"></i>
         <span class="ms-1">Copy</span>
       </button>
     </div>
