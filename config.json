@@ -1,0 +1,146 @@
+{
+  "images": [
+    {
+      "name": "Cafe",
+      "id": "cafe",
+      "prompt": "Draw a person sitting at a café table with a laptop, books, and a coffee cup, in front of a modern city street with buildings, trees, and passing people."
+    }
+  ],
+  "styles": [
+    {
+      "name": "Frottage Technique",
+      "id": "frottage-technique",
+      "prompt": "Draw in frottage technique style, with textured paper-rubbing effects, organic surface patterns, charcoal-like textures, layered rubbing marks."
+    },
+    {
+      "name": "Decalcomania",
+      "id": "decalcomania",
+      "prompt": "Draw using decalcomania, with mirrored paint-transfer blotches, unpredictable organic textures, and accidental symmetry."
+    },
+    {
+      "name": "Scumbling",
+      "id": "scumbling",
+      "prompt": "Draw with translucent scumbled layers, soft cloudy transitions, visible underpainting, and an ethereal haze."
+    },
+    {
+      "name": "Grattage",
+      "id": "grattage",
+      "prompt": "Draw with grattage scraping, revealing bright underlying colors, rough surface scratches, and layered paint excavation."
+    },
+    {
+      "name": "Sgraffito",
+      "id": "sgraffito",
+      "prompt": "Draw in sgraffito style, scratching linear motifs through the surface to expose contrasting layers beneath."
+    },
+    {
+      "name": "Soufflage (Blown Paint)",
+      "id": "soufflage-blown-paint",
+      "prompt": "Draw with blown-paint soufflage effects, wind-driven drips and splatters, airy dispersion, and organic branching forms."
+    },
+    {
+      "name": "Paper-Cut Shadow Layering",
+      "id": "paper-cut-shadow-layering",
+      "prompt": "Draw as layered paper-cut shadow art, crisp stacked silhouettes, precise cast shadows, and architectural depth."
+    },
+    {
+      "name": "Stippling Mixed Media",
+      "id": "stippling-mixed-media",
+      "prompt": "Draw with dense stippling and mixed textures, micro-dots forming gradients, interleaved with paper, ink, or pastel accents."
+    },
+    {
+      "name": "Digital Encaustic",
+      "id": "digital-encaustic",
+      "prompt": "Draw in a digital encaustic look, waxy flows, semi-translucent color pools, and molten, tactile surfaces."
+    },
+    {
+      "name": "Textured Gesso Relief",
+      "id": "textured-gesso-relief",
+      "prompt": "Draw over textured gesso, sculptural low-relief ridges, impasto-like grooves, and tactile, light-catching surfaces."
+    },
+    {
+      "name": "Mecanorma / Vintage French Collage",
+      "id": "mecanorma-vintage-french-collage",
+      "prompt": "Draw as a Mecanorma collage, cut-and-paste printed textures and patterns with slight misregistration on grainy paper."
+    },
+    {
+      "name": "Stained-Glass (Medieval / Folk)",
+      "id": "stained-glass-medieval-folk",
+      "prompt": "Draw as crude stained glass, thick black lead cames, segmented uneven color panes, and backlit luminosity."
+    },
+    {
+      "name": "Xerox / Photocopy Aesthetic",
+      "id": "xerox-photocopy-aesthetic",
+      "prompt": "Draw in Xerox copy-art style, high-contrast black-and-white, degraded midtones, gritty halftone noise, zine energy."
+    },
+    {
+      "name": "Adinkra-Inspired Symbolism (Pseudo-Sankofa)",
+      "id": "adinkra-inspired-symbolism-pseudo-sankofa",
+      "prompt": "Draw with West African Adinkra-style symbols, bold symmetry, dense patterned negatives, and red-black-gold palette."
+    },
+    {
+      "name": "Frutiger Aero",
+      "id": "frutiger-aero",
+      "prompt": "Draw in a mid-2000s Frutiger Aero vibe, glossy skeuomorphism, glowing bubbles, clean skies and grass, nature-tech harmony."
+    },
+    {
+      "name": "Psychedelic Op Art",
+      "id": "psychedelic-op-art",
+      "prompt": "Draw as psychedelic Op Art, precise geometric interference, moire vibrations, high-contrast illusions of motion and warp."
+    },
+    {
+      "name": "Soviet Brutalist Poster",
+      "id": "soviet-brutalist-poster",
+      "prompt": "Draw a Soviet-brutalist poster, monumental geometry, limited red-black-cream palette, bold block typography, concrete grain."
+    },
+    {
+      "name": "Trouvelot Astronomical Pastels",
+      "id": "trouvelot-astronomical-pastels",
+      "prompt": "Draw like a 19th-century astronomical pastel, scientifically accurate celestial forms with soft luminous glows on textured paper."
+    },
+    {
+      "name": "Dazzle Camouflage",
+      "id": "dazzle-camouflage",
+      "prompt": "Draw using WWI dazzle patterns, disruptive black-white geometry that fractures silhouette and confuses direction."
+    },
+    {
+      "name": "Toba-e Caricature (Edo)",
+      "id": "toba-e-caricature-edo",
+      "prompt": "Draw playful anthropomorphic animals in flowing brush lines, sparse color, and witty Edo-period caricature energy."
+    },
+    {
+      "name": "Anamorphic Hidden Image",
+      "id": "anamorphic-hidden-image",
+      "prompt": "Draw an anamorphic illusion that resolves into a hidden portrait or symbol from a specific viewing angle."
+    },
+    {
+      "name": "'Bad Painting' Irreverent Figuration",
+      "id": "bad-painting-irreverent-figuration",
+      "prompt": "Draw intentionally naive figures with flat planes, decorative patterns, and cheeky anti-polish attitude."
+    },
+    {
+      "name": "Etched Gothic-Surreal Linework",
+      "id": "etched-gothic-surreal-linework",
+      "prompt": "Draw dense gothic-surreal line etchings, spired architectures and grotesques in obsessive cross-hatching."
+    },
+    {
+      "name": "Doodle-Constructivist Architecture",
+      "id": "doodle-constructivist-architecture",
+      "prompt": "Draw fantastical doodle-architecture, biomorphic buildings fused with everyday objects in exuberant schematic chaos."
+    },
+    {
+      "name": "Nychos Street Mural (Anatomical Cross-Section)",
+      "id": "nychos-street-mural-anatomical-cross-section",
+      "prompt": "Draw a bold street-art mural showing skeletal anatomy beneath the surface, x-ray layers and high-contrast spray."
+    },
+    {
+      "name": "Neo-Surreal Polished Macabre",
+      "id": "neo-surreal-polished-macabre",
+      "prompt": "Draw crisp neo-surreal scenes with uncanny body fragments, glossy finish, and quietly humorous dark undertones."
+    },
+    {
+      "name": "Psychedelic Retro Poster ('60s)",
+      "id": "psychedelic-retro-poster-60s",
+      "prompt": "Draw a 1960s-style psychedelic poster, swirling saturated gradients, bold lettering forms, and subtle film-grain texture."
+    }
+  ]
+}
