@@ -1,6 +1,6 @@
 # LLM Art Style
 
-LLMs create photos, comics, etc. as easily as unusual illustrations. I prompted:
+LLMs create photos, comics, etc. as easily as unusual illustrations. [I prompted](https://chatgpt.com/share/68b99672-c6ec-800c-a22d-38404933bd8d):
 
 > Suggest unusual illustration styles not popular yet visually striking.
 
@@ -40,3 +40,7 @@ done
 This creates `images/<image-id>.<style-id>.<model-id>.webp` for each image x style x model combination.
 
 This is rendered by [`index.html`](index.html) and [`script.js`](script.js) as a static web site.
+
+## License
+
+[MIT](LICENSE)
