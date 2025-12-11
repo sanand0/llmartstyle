@@ -1,2 +1,3 @@
 # PNG images generated are huge. We're converting to WEBP
 images/*.png
+.env

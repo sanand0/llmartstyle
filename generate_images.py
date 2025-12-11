@@ -1,12 +1,13 @@
 # /// script
 # requires-python = ">=3.12"
-# dependencies = ["httpx", "tqdm"]
+# dependencies = ["httpx", "python-dotenv", "tqdm"]
 # ///
 
 import base64
 import httpx
 import json
 import os
+from dotenv import load_dotenv
 from pathlib import Path
 from typing import Any, Dict
 from tqdm import tqdm
@@ -19,7 +20,7 @@ def openrouter(model: str, prompt: str) -> bytes:
     payload: Dict[str, Any] = {
         "model": model,
         "messages": [{"role": "user", "content": prompt}],
-        "modalities": ["image", "text"],
+        "modalities": ["image"],
     }
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
     r = httpx.post(url, headers=headers, json=payload, timeout=None)
@@ -52,7 +53,7 @@ def openai(model: str, prompt: str) -> bytes:
 def main() -> None:
     """Generate images for each style with both models."""
     with open("config.json", "r", encoding="utf-8") as f:
-        cfg = json.load(f)
+        full_cfg = json.load(f)
 
     models = [
         ("nano-banana", lambda p: openrouter("google/gemini-2.5-flash-image-preview", p)),
@@ -62,18 +63,20 @@ def main() -> None:
     image_root = Path("images")
     image_root.mkdir(exist_ok=True)
 
-    for image in cfg["images"]:
-        for model_name, generator in models:
-            pbar = tqdm(cfg["styles"], desc=f"{model_name} - {image['id']}")
-            for style in pbar:
-                out = image_root / f"{image['id']}.{style['id']}.{model_name}.png"
-                pbar.set_postfix_str(style["id"])
-                if out.exists():
-                    continue
-                prompt = f"{image['prompt']}\nStyle: {style['prompt']}"
-                png_bytes = generator(prompt)
-                out.write_bytes(png_bytes)
+    for cfg in full_cfg.values():
+        for image in cfg["images"]:
+            for model_name, generator in models:
+                pbar = tqdm(cfg["styles"], desc=f"{model_name} - {image['id']}")
+                for style in pbar:
+                    out = image_root / f"{image['id']}.{style['id']}.{model_name}.png"
+                    pbar.set_postfix_str(style["id"])
+                    if out.exists():
+                        continue
+                    prompt = f"{image['prompt']}\nStyle: {style['prompt']}"
+                    png_bytes = generator(prompt)
+                    out.write_bytes(png_bytes)
 
 
 if __name__ == "__main__":
+    load_dotenv()
     main()

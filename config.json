@@ -1,221 +1,359 @@
 {
-  "images": [
-    {
-      "name": "Cafe",
-      "id": "cafe",
-      "prompt": "Draw a person sitting at a café table with a laptop, books, and a coffee cup, in front of a modern city street with buildings, trees, and passing people."
-    }
-  ],
-  "styles": [
-    {
-      "name": "Frottage Technique",
-      "id": "frottage-technique",
-      "prompt": "Draw in frottage technique style, with textured paper-rubbing effects, organic surface patterns, charcoal-like textures, layered rubbing marks."
-    },
-    {
-      "name": "Decalcomania",
-      "id": "decalcomania",
-      "prompt": "Draw using decalcomania, with mirrored paint-transfer blotches, unpredictable organic textures, and accidental symmetry."
-    },
-    {
-      "name": "Scumbling",
-      "id": "scumbling",
-      "prompt": "Draw with translucent scumbled layers, soft cloudy transitions, visible underpainting, and an ethereal haze."
-    },
-    {
-      "name": "Grattage",
-      "id": "grattage",
-      "prompt": "Draw with grattage scraping, revealing bright underlying colors, rough surface scratches, and layered paint excavation."
-    },
-    {
-      "name": "Sgraffito",
-      "id": "sgraffito",
-      "prompt": "Draw in sgraffito style, scratching linear motifs through the surface to expose contrasting layers beneath."
-    },
-    {
-      "name": "Soufflage (Blown Paint)",
-      "id": "soufflage-blown-paint",
-      "prompt": "Draw with blown-paint soufflage effects, wind-driven drips and splatters, airy dispersion, and organic branching forms."
-    },
-    {
-      "name": "Paper-Cut Shadow Layering",
-      "id": "paper-cut-shadow-layering",
-      "prompt": "Draw as layered paper-cut shadow art, crisp stacked silhouettes, precise cast shadows, and architectural depth."
-    },
-    {
-      "name": "Stippling Mixed Media",
-      "id": "stippling-mixed-media",
-      "prompt": "Draw with dense stippling and mixed textures, micro-dots forming gradients, interleaved with paper, ink, or pastel accents."
-    },
-    {
-      "name": "Digital Encaustic",
-      "id": "digital-encaustic",
-      "prompt": "Draw in a digital encaustic look, waxy flows, semi-translucent color pools, and molten, tactile surfaces."
-    },
-    {
-      "name": "Textured Gesso Relief",
-      "id": "textured-gesso-relief",
-      "prompt": "Draw over textured gesso, sculptural low-relief ridges, impasto-like grooves, and tactile, light-catching surfaces."
-    },
-    {
-      "name": "Mecanorma / Vintage French Collage",
-      "id": "mecanorma-vintage-french-collage",
-      "prompt": "Draw as a Mecanorma collage, cut-and-paste printed textures and patterns with slight misregistration on grainy paper."
-    },
-    {
-      "name": "Stained-Glass (Medieval / Folk)",
-      "id": "stained-glass-medieval-folk",
-      "prompt": "Draw as crude stained glass, thick black lead cames, segmented uneven color panes, and backlit luminosity."
-    },
-    {
-      "name": "Xerox / Photocopy Aesthetic",
-      "id": "xerox-photocopy-aesthetic",
-      "prompt": "Draw in Xerox copy-art style, high-contrast black-and-white, degraded midtones, gritty halftone noise, zine energy."
-    },
-    {
-      "name": "Adinkra-Inspired Symbolism (Pseudo-Sankofa)",
-      "id": "adinkra-inspired-symbolism-pseudo-sankofa",
-      "prompt": "Draw with West African Adinkra-style symbols, bold symmetry, dense patterned negatives, and red-black-gold palette."
-    },
-    {
-      "name": "Frutiger Aero",
-      "id": "frutiger-aero",
-      "prompt": "Draw in a mid-2000s Frutiger Aero vibe, glossy skeuomorphism, glowing bubbles, clean skies and grass, nature-tech harmony."
-    },
-    {
-      "name": "Psychedelic Op Art",
-      "id": "psychedelic-op-art",
-      "prompt": "Draw as psychedelic Op Art, precise geometric interference, moire vibrations, high-contrast illusions of motion and warp."
-    },
-    {
-      "name": "Soviet Brutalist Poster",
-      "id": "soviet-brutalist-poster",
-      "prompt": "Draw a Soviet-brutalist poster, monumental geometry, limited red-black-cream palette, bold block typography, concrete grain."
-    },
-    {
-      "name": "Trouvelot Astronomical Pastels",
-      "id": "trouvelot-astronomical-pastels",
-      "prompt": "Draw like a 19th-century astronomical pastel, scientifically accurate celestial forms with soft luminous glows on textured paper."
-    },
-    {
-      "name": "Dazzle Camouflage",
-      "id": "dazzle-camouflage",
-      "prompt": "Draw using WWI dazzle patterns, disruptive black-white geometry that fractures silhouette and confuses direction."
-    },
-    {
-      "name": "Toba-e Caricature (Edo)",
-      "id": "toba-e-caricature-edo",
-      "prompt": "Draw playful anthropomorphic animals in flowing brush lines, sparse color, and witty Edo-period caricature energy."
-    },
-    {
-      "name": "Anamorphic Hidden Image",
-      "id": "anamorphic-hidden-image",
-      "prompt": "Draw an anamorphic illusion that resolves into a hidden portrait or symbol from a specific viewing angle."
-    },
-    {
-      "name": "'Bad Painting' Irreverent Figuration",
-      "id": "bad-painting-irreverent-figuration",
-      "prompt": "Draw intentionally naive figures with flat planes, decorative patterns, and cheeky anti-polish attitude."
-    },
-    {
-      "name": "Etched Gothic-Surreal Linework",
-      "id": "etched-gothic-surreal-linework",
-      "prompt": "Draw dense gothic-surreal line etchings, spired architectures and grotesques in obsessive cross-hatching."
-    },
-    {
-      "name": "Doodle-Constructivist Architecture",
-      "id": "doodle-constructivist-architecture",
-      "prompt": "Draw fantastical doodle-architecture, biomorphic buildings fused with everyday objects in exuberant schematic chaos."
-    },
-    {
-      "name": "Nychos Street Mural (Anatomical Cross-Section)",
-      "id": "nychos-street-mural-anatomical-cross-section",
-      "prompt": "Draw a bold street-art mural showing skeletal anatomy beneath the surface, x-ray layers and high-contrast spray."
-    },
-    {
-      "name": "Neo-Surreal Polished Macabre",
-      "id": "neo-surreal-polished-macabre",
-      "prompt": "Draw crisp neo-surreal scenes with uncanny body fragments, glossy finish, and quietly humorous dark undertones."
-    },
-    {
-      "name": "Psychedelic Retro Poster ('60s)",
-      "id": "psychedelic-retro-poster-60s",
-      "prompt": "Draw a 1960s-style psychedelic poster, swirling saturated gradients, bold lettering forms, and subtle film-grain texture."
-    },
-    {
-      "name": "Quantum Flux Patterns",
-      "id": "quantum-flux-patterns",
-      "prompt": "Draw in a quantum-inspired style, with probabilistic wave-like forms, shimmering particle trails, and dynamic interference patterns that shift with perspective."
-    },
-    {
-      "name": "Bioplastic Morphic Layers",
-      "id": "bioplastic-morphic-layers",
-      "prompt": "Draw with translucent, organic bioplastic layers, fluid cellular structures, and soft bioluminescent gradients that mimic living tissue."
-    },
-    {
-      "name": "Glitchtopian Relics",
-      "id": "glitchtopian-relics",
-      "prompt": "Draw as fragmented digital artifacts, with pixelated decay, corrupted data shards, and neon glitches forming futuristic relics."
-    },
-    {
-      "name": "Aerochromatic Flux",
-      "id": "aerochromatic-flux",
-      "prompt": "Draw with iridescent, prismatic color shifts, fluid metallic sheens, and aerodynamic contours that evoke weightless energy flows."
-    },
-    {
-      "name": "Neural Tapestry Weave",
-      "id": "neural-tapestry-weave",
-      "prompt": "Draw as a neural network-inspired tapestry, with interconnected nodal threads, synaptic pulses, and evolving fractal patterns in muted tones."
-    },
-    {
-      "name": "The Bengal School of Art",
-      "id": "bengal-school-of-art",
-      "prompt": "Draw in the Bengal School of Art style, with delicate Japanese wash watercolor layers, soft dreamlike atmospheres, sombre muted palettes, refined linear figures, and flattened miniature-inspired perspectives depicting mystical or symbolic scenes."
-    },
-    {
-      "name": "Africobra",
-      "id": "africobra",
-      "prompt": "Draw in Africobra style, with vibrant coolade colors, rhythmic interlocking patterns, bold text and imagery, and powerful depictions of Black identity, community, and pride infused with positive energy."
-    },
-    {
-      "name": "Stridentism (Estridentismo)",
-      "id": "stridentism",
-      "prompt": "Draw in Stridentism style, with dynamic fragmented lines, urban-industrial motifs like skyscrapers, machines, airplanes, and telegraph cables, woodcut-like bold contrasts, and irreverent, energetic compositions celebrating modernity and revolution."
-    },
-    {
-      "name": "Gutai Group",
-      "id": "gutai-group",
-      "prompt": "Draw in Gutai Group style, emphasizing raw energy, explosive splatters, smeared textures, gouges, drips, and unconventional materials, capturing the physical force and bodily movement of performance-based creation."
-    },
-    {
-      "name": "Ebru (Turkish Paper Marbling)",
-      "id": "ebru",
-      "prompt": "Draw in Ebru marbling style, with floating pigments on liquid, combed into swirling veins, concentric organic forms, bleeding edges, and fluid unpredictable patterns resembling marble, smoke, or water."
-    },
-    {
-      "name": "Pysanka Symbology",
-      "id": "pysanka-symbology",
-      "prompt": "Draw in Pysanka style, with geometric wax-resist motifs, suns, stars, trees of life, birds, and eternity bands, structured into symmetrical sections, using symbolic colors like red, black, yellow, and green for dense talismanic patterns."
-    },
-    {
-      "name": "Lowbrow (Pop Surrealism)",
-      "id": "lowbrow-pop-surrealism",
-      "prompt": "Draw in Lowbrow Pop Surrealism style, with polished classical painting techniques applied to playful or grotesque cartoon-like characters, surreal juxtapositions, kitsch pop-culture icons, and satirical, humorous undertones."
-    },
-    {
-      "name": "Algorithmic Beauty (Fractal Art)",
-      "id": "fractal-art",
-      "prompt": "Draw in fractal art style, with infinitely recursive geometric spirals, self-similar branching forms, organic mathematical patterns, and intricate details resembling galaxies, coastlines, snowflakes, or tree growth."
-    },
-    {
-      "name": "Vaporwave Aesthetics",
-      "id": "vaporwave",
-      "prompt": "Draw in Vaporwave style, with pastel pink and blue gradients, retro computer graphics, VHS glitch textures, Greco-Roman statues, obsolete 90s UI elements, palm trees, Japanese text, and a melancholic nostalgic mood."
-    },
-    {
-      "name": "Risograph Texture",
-      "id": "risograph-texture",
-      "prompt": "Draw in Risograph style, with limited vibrant spot colors, overprinted layers creating unexpected blends, halftone grainy textures, and charming imperfections like misaligned color registration and uneven ink coverage."
-    }
-  ]
+  "art": {
+    "images": [
+      {
+        "name": "Cafe",
+        "id": "cafe",
+        "prompt": "Draw a person sitting at a café table with a laptop, books, and a coffee cup, in front of a modern city street with buildings, trees, and passing people."
+      }
+    ],
+    "styles": [
+      {
+        "name": "Frottage Technique",
+        "id": "frottage-technique",
+        "prompt": "Draw in frottage technique style, with textured paper-rubbing effects, organic surface patterns, charcoal-like textures, layered rubbing marks."
+      },
+      {
+        "name": "Decalcomania",
+        "id": "decalcomania",
+        "prompt": "Draw using decalcomania, with mirrored paint-transfer blotches, unpredictable organic textures, and accidental symmetry."
+      },
+      {
+        "name": "Scumbling",
+        "id": "scumbling",
+        "prompt": "Draw with translucent scumbled layers, soft cloudy transitions, visible underpainting, and an ethereal haze."
+      },
+      {
+        "name": "Grattage",
+        "id": "grattage",
+        "prompt": "Draw with grattage scraping, revealing bright underlying colors, rough surface scratches, and layered paint excavation."
+      },
+      {
+        "name": "Sgraffito",
+        "id": "sgraffito",
+        "prompt": "Draw in sgraffito style, scratching linear motifs through the surface to expose contrasting layers beneath."
+      },
+      {
+        "name": "Soufflage (Blown Paint)",
+        "id": "soufflage-blown-paint",
+        "prompt": "Draw with blown-paint soufflage effects, wind-driven drips and splatters, airy dispersion, and organic branching forms."
+      },
+      {
+        "name": "Paper-Cut Shadow Layering",
+        "id": "paper-cut-shadow-layering",
+        "prompt": "Draw as layered paper-cut shadow art, crisp stacked silhouettes, precise cast shadows, and architectural depth."
+      },
+      {
+        "name": "Stippling Mixed Media",
+        "id": "stippling-mixed-media",
+        "prompt": "Draw with dense stippling and mixed textures, micro-dots forming gradients, interleaved with paper, ink, or pastel accents."
+      },
+      {
+        "name": "Digital Encaustic",
+        "id": "digital-encaustic",
+        "prompt": "Draw in a digital encaustic look, waxy flows, semi-translucent color pools, and molten, tactile surfaces."
+      },
+      {
+        "name": "Textured Gesso Relief",
+        "id": "textured-gesso-relief",
+        "prompt": "Draw over textured gesso, sculptural low-relief ridges, impasto-like grooves, and tactile, light-catching surfaces."
+      },
+      {
+        "name": "Mecanorma / Vintage French Collage",
+        "id": "mecanorma-vintage-french-collage",
+        "prompt": "Draw as a Mecanorma collage, cut-and-paste printed textures and patterns with slight misregistration on grainy paper."
+      },
+      {
+        "name": "Stained-Glass (Medieval / Folk)",
+        "id": "stained-glass-medieval-folk",
+        "prompt": "Draw as crude stained glass, thick black lead cames, segmented uneven color panes, and backlit luminosity."
+      },
+      {
+        "name": "Xerox / Photocopy Aesthetic",
+        "id": "xerox-photocopy-aesthetic",
+        "prompt": "Draw in Xerox copy-art style, high-contrast black-and-white, degraded midtones, gritty halftone noise, zine energy."
+      },
+      {
+        "name": "Adinkra-Inspired Symbolism (Pseudo-Sankofa)",
+        "id": "adinkra-inspired-symbolism-pseudo-sankofa",
+        "prompt": "Draw with West African Adinkra-style symbols, bold symmetry, dense patterned negatives, and red-black-gold palette."
+      },
+      {
+        "name": "Frutiger Aero",
+        "id": "frutiger-aero",
+        "prompt": "Draw in a mid-2000s Frutiger Aero vibe, glossy skeuomorphism, glowing bubbles, clean skies and grass, nature-tech harmony."
+      },
+      {
+        "name": "Psychedelic Op Art",
+        "id": "psychedelic-op-art",
+        "prompt": "Draw as psychedelic Op Art, precise geometric interference, moire vibrations, high-contrast illusions of motion and warp."
+      },
+      {
+        "name": "Soviet Brutalist Poster",
+        "id": "soviet-brutalist-poster",
+        "prompt": "Draw a Soviet-brutalist poster, monumental geometry, limited red-black-cream palette, bold block typography, concrete grain."
+      },
+      {
+        "name": "Trouvelot Astronomical Pastels",
+        "id": "trouvelot-astronomical-pastels",
+        "prompt": "Draw like a 19th-century astronomical pastel, scientifically accurate celestial forms with soft luminous glows on textured paper."
+      },
+      {
+        "name": "Dazzle Camouflage",
+        "id": "dazzle-camouflage",
+        "prompt": "Draw using WWI dazzle patterns, disruptive black-white geometry that fractures silhouette and confuses direction."
+      },
+      {
+        "name": "Toba-e Caricature (Edo)",
+        "id": "toba-e-caricature-edo",
+        "prompt": "Draw playful anthropomorphic animals in flowing brush lines, sparse color, and witty Edo-period caricature energy."
+      },
+      {
+        "name": "Anamorphic Hidden Image",
+        "id": "anamorphic-hidden-image",
+        "prompt": "Draw an anamorphic illusion that resolves into a hidden portrait or symbol from a specific viewing angle."
+      },
+      {
+        "name": "Quantum Flux Patterns",
+        "id": "quantum-flux-patterns",
+        "prompt": "Draw in a quantum-inspired style, with probabilistic wave-like forms, shimmering particle trails, and dynamic interference patterns that shift with perspective."
+      },
+      {
+        "name": "Bioplastic Morphic Layers",
+        "id": "bioplastic-morphic-layers",
+        "prompt": "Draw with translucent, organic bioplastic layers, fluid cellular structures, and soft bioluminescent gradients that mimic living tissue."
+      },
+      {
+        "name": "Glitchtopian Relics",
+        "id": "glitchtopian-relics",
+        "prompt": "Draw as fragmented digital artifacts, with pixelated decay, corrupted data shards, and neon glitches forming futuristic relics."
+      },
+      {
+        "name": "Aerochromatic Flux",
+        "id": "aerochromatic-flux",
+        "prompt": "Draw with iridescent, prismatic color shifts, fluid metallic sheens, and aerodynamic contours that evoke weightless energy flows."
+      },
+      {
+        "name": "Neural Tapestry Weave",
+        "id": "neural-tapestry-weave",
+        "prompt": "Draw as a neural network-inspired tapestry, with interconnected nodal threads, synaptic pulses, and evolving fractal patterns in muted tones."
+      },
+      {
+        "name": "The Bengal School of Art",
+        "id": "bengal-school-of-art",
+        "prompt": "Draw in the Bengal School of Art style, with delicate Japanese wash watercolor layers, soft dreamlike atmospheres, sombre muted palettes, refined linear figures, and flattened miniature-inspired perspectives depicting mystical or symbolic scenes."
+      },
+      {
+        "name": "Africobra",
+        "id": "africobra",
+        "prompt": "Draw in Africobra style, with vibrant coolade colors, rhythmic interlocking patterns, bold text and imagery, and powerful depictions of Black identity, community, and pride infused with positive energy."
+      },
+      {
+        "name": "Stridentism (Estridentismo)",
+        "id": "stridentism",
+        "prompt": "Draw in Stridentism style, with dynamic fragmented lines, urban-industrial motifs like skyscrapers, machines, airplanes, and telegraph cables, woodcut-like bold contrasts, and irreverent, energetic compositions celebrating modernity and revolution."
+      },
+      {
+        "name": "Gutai Group",
+        "id": "gutai-group",
+        "prompt": "Draw in Gutai Group style, emphasizing raw energy, explosive splatters, smeared textures, gouges, drips, and unconventional materials, capturing the physical force and bodily movement of performance-based creation."
+      },
+      {
+        "name": "Ebru (Turkish Paper Marbling)",
+        "id": "ebru",
+        "prompt": "Draw in Ebru marbling style, with floating pigments on liquid, combed into swirling veins, concentric organic forms, bleeding edges, and fluid unpredictable patterns resembling marble, smoke, or water."
+      },
+      {
+        "name": "Pysanka Symbology",
+        "id": "pysanka-symbology",
+        "prompt": "Draw in Pysanka style, with geometric wax-resist motifs, suns, stars, trees of life, birds, and eternity bands, structured into symmetrical sections, using symbolic colors like red, black, yellow, and green for dense talismanic patterns."
+      },
+      {
+        "name": "Lowbrow (Pop Surrealism)",
+        "id": "lowbrow-pop-surrealism",
+        "prompt": "Draw in Lowbrow Pop Surrealism style, with polished classical painting techniques applied to playful or grotesque cartoon-like characters, surreal juxtapositions, kitsch pop-culture icons, and satirical, humorous undertones."
+      },
+      {
+        "name": "Algorithmic Beauty (Fractal Art)",
+        "id": "fractal-art",
+        "prompt": "Draw in fractal art style, with infinitely recursive geometric spirals, self-similar branching forms, organic mathematical patterns, and intricate details resembling galaxies, coastlines, snowflakes, or tree growth."
+      },
+      {
+        "name": "Vaporwave Aesthetics",
+        "id": "vaporwave",
+        "prompt": "Draw in Vaporwave style, with pastel pink and blue gradients, retro computer graphics, VHS glitch textures, Greco-Roman statues, obsolete 90s UI elements, palm trees, Japanese text, and a melancholic nostalgic mood."
+      },
+      {
+        "name": "Risograph Texture",
+        "id": "risograph-texture",
+        "prompt": "Draw in Risograph style, with limited vibrant spot colors, overprinted layers creating unexpected blends, halftone grainy textures, and charming imperfections like misaligned color registration and uneven ink coverage."
+      }
+    ]
+  },
+  "text": {
+    "images": [
+      {
+        "name": "Game",
+        "id": "game",
+        "prompt": "Create an instruction manual for the Rock, Paper, Scissors, Lizard, Spock game, explaining it fully. It is a game of chance that expands the traditional game of Rock, Paper, Scissors. The game is an expansion on the game Rock, Paper, Scissors, with the additional hand signs of Lizard (resembling a hand puppet), and Spock (the Vulcan Salute). Each player picks a variable and reveals it at the same time. The winner is the one who defeats the others. In a tie, the process is repeated until a winner is found. Here are the rules: Scissors cuts Paper. Paper covers Rock. Rock crushes Lizard. Lizard poisons Spock. Spock smashes Scissors. Scissors decapitates Lizard. Lizard eats Paper. Paper disproves Spock. Spock vaporizes Rock. Rock crushes Scissors."
+      }
+    ],
+    "styles": [
+      {
+        "name": "Isometric 3D Diorama",
+        "id": "isometric-3d-diorama",
+        "prompt": "Draw as an isometric 3D diorama, low poly style, cute, highly detailed, soft studio lighting, pastel color palette, on a clean matte background. The scene is divided into distinct zones connected by pathways. High resolution, 4k, render."
+      },
+      {
+        "name": "Knolling Photography",
+        "id": "knolling-photography",
+        "prompt": "Draw as knolling photography, flat lay, overhead view, arranged neatly in a grid on a smooth [Color, e.g., sage green] background, perfectly aligned, 90-degree angles, hyper-realistic, soft diffused lighting, high texture, minimalist aesthetic."
+      },
+      {
+        "name": "Journey Map",
+        "id": "journey-map",
+        "prompt": "Draw as a horizontal journey map with 6-8 illustrated scene boxes in sequence, wavy emotional curve line overlay, touchpoints marked below, clean infographic style, timeline flow left to right."
+      },
+      {
+        "name": "Network Diagram",
+        "id": "network-diagram",
+        "prompt": "Draw as a network diagram with rectangular cards/boxes containing single concepts, connected by labeled arrows showing relationships, looks like neural network or knowledge graph, white background."
+      },
+      {
+        "name": "Radial Diagram",
+        "id": "radial-diagram",
+        "prompt": "Draw as a radial diagram with central circle labeled from the core topic, 6 major colored pie segments around it, labeled by theme, each with 2-3 smaller outer segments for details, clean minimal style."
+      },
+      {
+        "name": "Alchemical Laboratory",
+        "id": "alchemical-laboratory",
+        "prompt": "Draw as a Renaissance alchemical laboratory, bubbling potions and ancient scrolls, occult manuscript style, highly detailed, warm candlelit lighting, sepia and copper palette, on a dark wooden background. The text appears on vellum scrolls, bottle labels, and glowing mystical runes. High resolution, 4k, render."
+      },
+      {
+        "name": "Archivist's Specimen Drawers",
+        "id": "archivists-specimen-drawers",
+        "prompt": "Draw as a wall of classic natural history specimen drawers, slightly ajar. Each drawer contains a curated idea, with a large, typed specimen label. Fragments of text are visible on aged tags, pinned notes, and drawn diagrams inside. Wooden cabinets, warm archival light, highly detailed, realistic."
+      },
+      {
+        "name": "Bio-Luminescent Mycelial Network",
+        "id": "bioluminescent-mycelial-network",
+        "prompt": "Draw as a glowing, underground fungal network. The main argument is the central, luminous mushroom cluster. Supporting points are glowing nodes (mycelial knots) connected by bioluminescent hyphae strands. All text is formed by the light of the organisms themselves, clear and readable against the dark soil. Mysterious, detailed, 4k."
+      },
+      {
+        "name": "Circuit Board",
+        "id": "circuit-board",
+        "prompt": "Draw as a microchip circuit board, silicon pathways and micro-components, technical blueprint style, highly detailed, bright workstation lighting, PCB green and copper palette, on a clean matte background. The text is silkscreened as clear component labels. High resolution, 4k, render."
+      },
+      {
+        "name": "Constellation in a Nebula",
+        "id": "constellation-in-a-nebula",
+        "prompt": "Draw as a celestial formation within a colorful nebula. Primary topics are major stars connected by clear lines to form constellations. Explanatory text is neatly positioned as astral cartography labels around them. Ethereal, deep space, stars provide illumination, cosmic dust, 8k."
+      },
+      {
+        "name": "Coral Reef Ecosystem",
+        "id": "coral-reef-ecosystem",
+        "prompt": "Draw as an underwater coral reef ecosystem, bioluminescent marine life, scientific illustration style, highly detailed, dappled caustic lighting, vibrant oceanic palette, on a deep blue background. The text appears clearly on sea turtle shells, fish scales, and branching coral structures. High resolution, 4k, render."
+      },
+      {
+        "name": "Cryptographic Cartography",
+        "id": "cryptographic-cartography",
+        "prompt": "Draw as an antique, weathered parchment map. Key ideas are illustrated as landmark islands in a sea of connections, with core theses as capital cities. All explanatory text is neatly placed as illustrated callouts, map labels, and a decorative legend. High detail, muted earth tones, slight paper texture, 4k."
+      },
+      {
+        "name": "Floating Calligraphic Ink in Water",
+        "id": "floating-calligraphic-ink-in-water",
+        "prompt": "Draw with black calligraphic ink dispersing in clear, still water. The main title is a dense, elegant script at the surface. Key sentences flow and curl as ribbons of ink descending into the depths, remaining perfectly readable. Serene, minimalist, macro photography, sunlight from above, slow motion capture."
+      },
+      {
+        "name": "Geode Cross-Section",
+        "id": "geode-cross-section",
+        "prompt": "Draw the polished face of a giant, complex geode. The central thesis is a large crystal cluster at the heart. Supporting elements are surrounding crystal formations, with text carved into the flat geode walls around them. Crystalline, glittering, minerals provide color, studio lit, clean background."
+      },
+      {
+        "name": "Holographic Interface",
+        "id": "holographic-interface",
+        "prompt": "Draw as a holographic interface display, translucent glowing screens, sci-fi UI style, highly detailed, volumetric lighting, neon cyan palette, on a deep space background. The text appears as primary interface elements floating in dimensional layers. High resolution, 4k, render."
+      },
+      {
+        "name": "Kinetic Sculpture Garden",
+        "id": "kinetic-sculpture-garden",
+        "prompt": "Draw as a kinetic sculpture garden, polished metal mobiles, modern art style, highly detailed, bright gallery lighting, monochromatic metallic palette, on a clean white museum background. The text is engraved on rotating plates that align to form sentences. High resolution, 4k, render."
+      },
+      {
+        "name": "Layered Glass Panels",
+        "id": "layered-glass-panels",
+        "prompt": "Draw as a series of interconnected, clear glass panels suspended in space. Each panel contains a core concept etched precisely into the glass, with supporting details floating as smaller, connected glass shards around it. Clean, refractive, with sharp shadows and a single light source causing subtle glows. Iridescent accents, on black."
+      },
+      {
+        "name": "Microscopic Petri Dish",
+        "id": "microscopic-petri-dish",
+        "prompt": "Draw as a microscopic petri dish view, fluorescently tagged cultures, scientific microscopy style, highly detailed, LED lab lighting, high contrast medical palette, on a clean white background. The text is formed by glowing bacteria colonies and cellular structures. High resolution, 4k, render."
+      },
+      {
+        "name": "Neon-Sign Circuit Board",
+        "id": "neon-sign-circuit-board",
+        "prompt": "Draw as a futuristic, densely packed circuit board at night. Key phrases are active, glowing neon signs mounted on the board. Data flows as vibrant pulses of light along copper pathways between them. Resin-coated, with a dark background, cinematic lighting, hyper-detailed, cyberpunk aesthetic."
+      },
+      {
+        "name": "Pop-up Book",
+        "id": "pop-up-book",
+        "prompt": "Draw as a 3D pop-up book, layered paper engineering, whimsical illustration style, highly detailed, soft reading lamp lighting, pastel storybook palette, on a neutral cardstock background. The text appears on dimensional pages and interactive pull tabs. High resolution, 4k, render."
+      },
+      {
+        "name": "Shadow Puppet Theater",
+        "id": "shadow-puppet-theater",
+        "prompt": "Draw as a Javanese shadow puppet theater, intricately cut leather figures, traditional wayang style, highly detailed, strong backlight illumination, monochromatic silhouette palette, on a stretched linen background. The text is carved as patterns within the puppet silhouettes. High resolution, 4k, render."
+      },
+      {
+        "name": "Stained Glass Cathedral Window",
+        "id": "stained-glass-cathedral-window",
+        "prompt": "Draw as a Gothic cathedral stained glass window, ornate lead caming, illuminated manuscript style, highly detailed, divine ray lighting, jewel tone palette, on a stone tracery background. The text forms the structural leadlines and central narrative panels. High resolution, 4k, render."
+      },
+      {
+        "name": "Steampunk Information Engine",
+        "id": "steampunk-information-engine",
+        "prompt": "Draw as a functioning brass and glass mechanical engine. Concepts are displayed on gauge faces, scrolling ticker tapes, and stamped metal plates. Logical flow is shown via pistons, gears, and steam pressure. Polished metal, oil sheen, coherent complexity, isometric view, 4k."
+      },
+      {
+        "name": "Topographic Map",
+        "id": "topographic-map",
+        "prompt": "Draw as a topographic landscape map, contour lines and elevation markers, vintage cartography style, highly detailed, even map lighting, earthy topographic palette, on a clean parchment background. The text labels geographical features as primary map elements. High resolution, 4k, render."
+      },
+      {
+        "name": "Woven Textile Tapestry",
+        "id": "woven-textile-tapestry",
+        "prompt": "Draw as an intricate, large-scale woven tapestry. The narrative is a central, embroidered story panel. Themes and facts are integrated into the elaborate border patterns and symbolic motifs. All text is elegantly stitched in contrasting thread, highly legible. Rich textiles, warm loom lighting, tangible texture, 4k."
+      },
+      {
+        "name": "Dessert Typography",
+        "id": "dessert-typography",
+        "prompt": "Draw as a delicious dessert typography masterpiece on a pristine white plate, letters sculpted from colorful macarons, chocolate ganache, fondant, and sprinkled details, professional food photography style, soft studio lighting, mouthwatering realism, shallow depth of field, 8k."
+      },
+      {
+        "name": "Bonatnical",
+        "id": "bonatnical",
+        "prompt": "Draw as a living botanical arrangement, each word and sentence formed by real flowers, leaves, vines and moss on a dark velvet surface, dewdrops on petals, soft natural window light, macro photography style, lush and vibrant, botanical accuracy, 4k."
+      },
+      {
+        "name": "Miniature City",
+        "id": "miniature-city",
+        "prompt": "Draw as a sprawling aerial view of a miniature city made entirely of typography, skyscrapers formed from stacked bold letters, roads spelled out in thin script, parks as swirling calligraphy, pastel sunrise lighting, highly detailed, isometric perspective, clean white void background, 4k."
+      },
+      {
+        "name": "Manuscript",
+        "id": "manuscript",
+        "prompt": "Draw as an ancient illuminated manuscript page on aged parchment, ornate gold leaf borders, medieval drop caps, tiny marginalia illustrations relating to the text, rich jewel tones, realistic parchment texture, soft candlelight glow, museum-quality detail, 8k."
+      },
+      {
+        "name": "Paper quilling",
+        "id": "paper-quilling",
+        "prompt": "Draw as an intricate paper quilling artwork, delicate rolled paper strips forming every letter and paragraph in flowing cursive and bold typography, soft pastel palette, gentle shadows, floating on a creamy textured background, extreme macro detail, cinematic lighting, 8k."
+      },
+      {
+        "name": "Crystalline ice sculpture typography",
+        "id": "crystalline-ice-sculpture-typography",
+        "prompt": "Draw crystalline ice sculpture typography floating in an arctic void, translucent frosted letters with internal light refraction, subtle rainbow caustics, delicate snow particles in the air, hyper-realistic ice texture, soft blue-white color palette, 8k."
+      }
+    ]
+  }
 }
