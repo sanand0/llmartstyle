@@ -1,4 +1,170 @@
 {
+  "pop": {
+    "images": [
+      {
+        "name": "Astronaut",
+        "id": "astronaut",
+        "prompt": "A cute astronaut sitting on a log in a forest holding a glowing flower"
+      }
+    ],
+    "styles": [
+      {
+        "name": "2D Animation",
+        "id": "2d-animation",
+        "prompt": "2D flat animation style, clean vector lines, cel-shaded coloring, cartoon proportions"
+      },
+      {
+        "name": "3D Animation",
+        "id": "3d-animation",
+        "prompt": "Modern 3D animation render, smooth surfaces, dramatic lighting, Octane render quality, cinematic depth"
+      },
+      {
+        "name": "Abstract",
+        "id": "abstract",
+        "prompt": "Abstract expressionist style, bold geometric shapes, vibrant color blocks, non-representational, dynamic composition"
+      },
+      {
+        "name": "Action Figure",
+        "id": "action-figure",
+        "prompt": "Plastic action figure style, articulated joints, glossy toy finish, display packaging aesthetic, collectible look"
+      },
+      {
+        "name": "Anime",
+        "id": "anime",
+        "prompt": "Japanese anime style, large expressive eyes, detailed hair, dynamic poses, vibrant colors, cell shading"
+      },
+      {
+        "name": "Balloon Art",
+        "id": "balloon-art",
+        "prompt": "Balloon sculpture style, glossy inflated latex texture, twisted balloon shapes, bright carnival colors, playful"
+      },
+      {
+        "name": "Cartoon",
+        "id": "cartoon",
+        "prompt": "Stylized cartoon illustration, exaggerated proportions, bold outlines, flat vibrant colors, playful expression"
+      },
+      {
+        "name": "Claymation",
+        "id": "claymation",
+        "prompt": "Claymation stop-motion style, textured chunky 3D figures, visible fingerprints on clay, soft shadows"
+      },
+      {
+        "name": "Comic Book",
+        "id": "comic-book",
+        "prompt": "Classic comic book style, bold ink outlines, halftone dot shading, vibrant primary colors, dynamic action poses"
+      },
+      {
+        "name": "Diorama",
+        "id": "diorama",
+        "prompt": "Miniature diorama scene, tiny detailed world, forced perspective, handcrafted model aesthetic, museum display quality"
+      },
+      {
+        "name": "Disney Classic",
+        "id": "disney-classic",
+        "prompt": "Classic Disney hand-drawn animation style, vintage 1950s aesthetic, soft shading, expressive eyes, warm colors"
+      },
+      {
+        "name": "Flat Design",
+        "id": "flat-design",
+        "prompt": "Flat design illustration, solid colors, clean shapes, no shadows or gradients, modern minimalist aesthetic"
+      },
+      {
+        "name": "Glitch Art",
+        "id": "glitch-art",
+        "prompt": "Glitch art datamosh effect, digital corruption, pixelation, VHS scan lines, color channel distortion, broken data aesthetic"
+      },
+      {
+        "name": "Graffiti",
+        "id": "graffiti",
+        "prompt": "Graffiti mural style, spray paint texture, bubble letters, dripping paint, urban street aesthetic, vibrant colors"
+      },
+      {
+        "name": "Graphic Novel",
+        "id": "graphic-novel",
+        "prompt": "Graphic novel illustration, cinematic framing, moody shadows, mature color palette, detailed linework"
+      },
+      {
+        "name": "Impressionism",
+        "id": "impressionism",
+        "prompt": "Impressionist painting style, soft dappled brushstrokes, natural light effects, dreamy atmospheric quality"
+      },
+      {
+        "name": "Lego / Brickfilm",
+        "id": "lego-brickfilm",
+        "prompt": "LEGO minifigure style, plastic brick textures, toy-like faces, colorful blocky world, miniature scale"
+      },
+      {
+        "name": "Manga",
+        "id": "manga",
+        "prompt": "Black and white manga style, expressive linework, screentone shading, dynamic action lines, Japanese comic aesthetic"
+      },
+      {
+        "name": "Meme",
+        "id": "meme",
+        "prompt": "Internet meme format, impact font text, low-res jpeg artifacts, viral image aesthetic, humorous composition"
+      },
+      {
+        "name": "Minimalist",
+        "id": "minimalist",
+        "prompt": "Minimalist art style, simple shapes, limited color palette, negative space, clean lines, uncluttered composition"
+      },
+      {
+        "name": "Muppets",
+        "id": "muppets",
+        "prompt": "Felt puppet style, yarn textures, googly eyes, stitched mouth, fuzzy fabric, colorful and playful"
+      },
+      {
+        "name": "Origami",
+        "id": "origami",
+        "prompt": "Origami paper-folded style, crisp geometric edges, folded paper textures, minimalist, clean white paper aesthetic"
+      },
+      {
+        "name": "Pixar",
+        "id": "pixar",
+        "prompt": "3D Pixar-style cartoon, clean lines, soft lighting, expressive features, polished cinematic render"
+      },
+      {
+        "name": "Pixel Art",
+        "id": "pixel-art",
+        "prompt": "Retro pixel art style, 8-bit aesthetic, blocky colored squares, nostalgic video game look, limited color palette"
+      },
+      {
+        "name": "Pop Art",
+        "id": "pop-art",
+        "prompt": "Andy Warhol-inspired pop art style, bold high-contrast colors, Ben-Day dots, graphic repetition, iconic imagery"
+      },
+      {
+        "name": "Realism",
+        "id": "realism",
+        "prompt": "Photorealistic painting style, visible brushstrokes, rich layered textures, lifelike detail, classical composition"
+      },
+      {
+        "name": "Sculpture",
+        "id": "sculpture",
+        "prompt": "3D sculptural render, marble or bronze texture, dramatic museum lighting, classical form, dimensional depth"
+      },
+      {
+        "name": "Stop Motion",
+        "id": "stop-motion",
+        "prompt": "Stop motion animation style, tangible handmade textures, visible puppet joints, frame-by-frame aesthetic"
+      },
+      {
+        "name": "Street Art",
+        "id": "street-art",
+        "prompt": "Street art stencil style, wheat-paste aesthetic, urban decay background, bold graphic design"
+      },
+      {
+        "name": "Studio Ghibli",
+        "id": "studio-ghibli",
+        "prompt": "Studio Ghibli style illustration, soft watercolor palette, delicate linework, cozy atmosphere, magical elements, hand-painted aesthetic"
+      },
+      {
+        "name": "Surrealism",
+        "id": "surrealism",
+        "prompt": "Surrealist dreamscape, illogical scene, melting forms, strange juxtapositions, dreamlike atmosphere, impossible physics"
+      }
+    ]
+  },
   "art": {
     "images": [
       {

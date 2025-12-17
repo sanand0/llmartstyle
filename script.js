@@ -10,11 +10,13 @@ const onCopy = (text) => {
   bootstrapAlert({ body: "Prompt copied", color: "success" });
 };
 
-$("#imageModal").addEventListener("show.bs.modal", (e) => {
-  const pathname = new URL(e.relatedTarget.getAttribute("src"), location.href).pathname;
-  const filename = pathname.split("/").pop().replace(/\.webp$/, ".png");
-  $("#imageModalLabel").textContent = $("#imageModalImg").alt = e.relatedTarget.getAttribute("alt") || "Image";
-  $("#imageModalImg").src = `${releasePngBase}${filename}`;
+document.addEventListener("DOMContentLoaded", () => {
+  $("#imageModal").addEventListener("show.bs.modal", (e) => {
+    const pathname = new URL(e.relatedTarget.getAttribute("src"), location.href).pathname;
+    const filename = pathname.split("/").pop().replace(/\.webp$/, ".png");
+    $("#imageModalLabel").textContent = $("#imageModalImg").alt = e.relatedTarget.getAttribute("alt") || "Image";
+    $("#imageModalImg").src = `${releasePngBase}${filename}`;
+  });
 });
 
 const categories = await fetch("./config.json").then((r) => r.json());
