@@ -1,7 +1,7 @@
 import { bootstrapAlert } from "https://cdn.jsdelivr.net/npm/bootstrap-alert@1";
 import { html, render } from "https://cdn.jsdelivr.net/npm/lit-html@3/+esm";
 
-const models = ["nano-banana", "gpt-image-1"]; // column = image, then model
+const models = ["nano-banana", "gpt-image-1", "gpt-image-1.5"]; // column = image, then model
 const statusEl = document.getElementById("status");
 const gridEl = document.getElementById("grid");
 const categoryLinksEl = document.getElementById("category-links");
@@ -37,7 +37,7 @@ const renderGrid = (cfg) => {
     <div class="flex-grow-1 d-flex flex-row flex-wrap">
       ${cfg.images.map(
         (img) => html`
-          <div class="p-2 border-start text-center" style="width: 320px">
+          <div class="p-2 border-start text-center" style="width: ${models.length * 160}px">
             <div class="fw-semibold">${img.name}</div>
             <div class="small text-body-secondary">${img.prompt}</div>
             <div class="row">
@@ -79,7 +79,7 @@ const renderGrid = (cfg) => {
   });
 
   render(html`<div class="border rounded overflow-auto">${header}${rows}</div>`, gridEl);
-  gridEl.style.width = `${cfg.images.length * 320 + 300 + 8}px`;
+  gridEl.style.width = `${cfg.images.length * models.length * 160 + 300 + 8}px`;
 };
 
 renderGrid(categories[currentCategoryId]);

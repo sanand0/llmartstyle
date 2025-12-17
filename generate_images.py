@@ -58,6 +58,7 @@ def main() -> None:
     models = [
         ("nano-banana", lambda p: openrouter("google/gemini-2.5-flash-image-preview", p)),
         ("gpt-image-1", lambda p: openai("gpt-image-1", p)),
+        ("gpt-image-1.5", lambda p: openai("gpt-image-1.5", p)),
     ]
 
     image_root = Path("images")

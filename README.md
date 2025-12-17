@@ -33,6 +33,7 @@ uv run generate_images.py
 
 # Convert images/*.png to images/*.webp at 25% size and maximum lossless compresion
 for f in images/*.png; do
+  [ -f "${f%.png}.webp" ] && continue
   cwebp -lossless -m 6 -resize $(magick identify -format "%[fx:w*0.25]" "$f") $(magick identify -format "%[fx:h*0.25]" "$f") "$f" -o "${f%.png}.webp"
 done
 ```
