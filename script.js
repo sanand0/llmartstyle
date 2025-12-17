@@ -1,15 +1,21 @@
 import { bootstrapAlert } from "https://cdn.jsdelivr.net/npm/bootstrap-alert@1";
 import { html, render } from "https://cdn.jsdelivr.net/npm/lit-html@3/+esm";
 
+const $ = (s, el = document) => el.querySelector(s);
 const models = ["nano-banana", "gpt-image-1", "gpt-image-1.5"]; // column = image, then model
-const statusEl = document.getElementById("status");
-const gridEl = document.getElementById("grid");
-const categoryLinksEl = document.getElementById("category-links");
+const releasePngBase = "https://github.com/sanand0/llmartstyle/releases/download/images/";
 
 const onCopy = (text) => {
   navigator.clipboard.writeText(text);
   bootstrapAlert({ body: "Prompt copied", color: "success" });
 };
+
+$("#imageModal").addEventListener("show.bs.modal", (e) => {
+  const pathname = new URL(e.relatedTarget.getAttribute("src"), location.href).pathname;
+  const filename = pathname.split("/").pop().replace(/\.webp$/, ".png");
+  $("#imageModalLabel").textContent = $("#imageModalImg").alt = e.relatedTarget.getAttribute("alt") || "Image";
+  $("#imageModalImg").src = `${releasePngBase}${filename}`;
+});
 
 const categories = await fetch("./config.json").then((r) => r.json());
 const categoryIds = Object.keys(categories);
@@ -18,17 +24,12 @@ const params = new URLSearchParams(window.location.search);
 const paramCategory = params.get("category");
 let currentCategoryId = paramCategory && categories[paramCategory] ? paramCategory : categoryIds[0];
 
-if (categoryLinksEl) {
-  const linksHtml = categoryIds
-    .map(
-      (id) =>
-        `<a href="?category=${encodeURIComponent(id)}" class="btn btn-sm btn-outline-secondary category-select${
-          id === currentCategoryId ? " active" : ""
-        }">${id}</a>`,
-    )
-    .join("");
-  categoryLinksEl.insertAdjacentHTML("beforeend", linksHtml);
-}
+$("#category-links").insertAdjacentHTML("beforeend", categoryIds.map(
+    (id) =>
+      `<a href="?category=${encodeURIComponent(id)}" class="btn btn-sm btn-outline-secondary category-select${
+        id === currentCategoryId ? " active" : ""
+      }">${id}</a>`,
+  ).join(""));
 
 const renderGrid = (cfg) => {
   // Provide only the grid template; import libs in index.html
@@ -66,8 +67,12 @@ const renderGrid = (cfg) => {
               <div class="p-1 text-center" style="width: 150px">
                 <img
                   class="img-fluid rounded border"
-                  style="max-height: 150px"
+                  style="cursor: zoom-in; max-height: 150px"
                   alt="${model} — ${style.name}"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  role="button"
+                  title="View image"
                   src="images/${image.id}.${style.id}.${model}.webp"
                 />
               </div>
@@ -78,9 +83,9 @@ const renderGrid = (cfg) => {
     </div>`;
   });
 
-  render(html`<div class="border rounded overflow-auto">${header}${rows}</div>`, gridEl);
-  gridEl.style.width = `${cfg.images.length * models.length * 160 + 300 + 8}px`;
+  render(html`<div class="border rounded overflow-auto">${header}${rows}</div>`, $("#grid"));
+  $("#grid").style.width = `${cfg.images.length * models.length * 160 + 300 + 8}px`;
 };
 
 renderGrid(categories[currentCategoryId]);
-statusEl.classList.add("d-none");
+$("#status").classList.add("d-none");

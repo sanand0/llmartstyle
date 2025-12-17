@@ -42,6 +42,20 @@ This creates `images/<image-id>.<style-id>.<model-id>.webp` for each image x sty
 
 This is rendered by [`index.html`](index.html) and [`script.js`](script.js) as a static web site.
 
+## Deploy
+
+The images are on GitHub releases at <https://github.com/sanand0/llmartstyle/releases/tag/images> created via:
+
+```bash
+gh release create images --title "Images" --notes "AI-generated images"
+```
+
+To upload all, run:
+
+```bash
+gh release upload images images/*.png
+```
+
 ## License
 
 [MIT](LICENSE)
