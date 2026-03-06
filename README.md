@@ -21,14 +21,15 @@ LLMs create photos, comics, etc. as easily as unusual illustrations. [I prompted
 
 We currently generate images using:
 
+- [`gemini-3.1-flash-image-preview`](https://ai.google.dev/gemini-api/docs/image-generation) via Gemini API (nano-banana-2)
 - [`gpt-image-1`](https://platform.openai.com/docs/models/gpt-image-1) via OpenAI
-- [`google/gemini-2.5-flash-image-preview`](https://openrouter.ai/google/gemini-2.5-flash-image-preview) via OpenRouter (nano-banana)
+- [`gemini-2.5-flash-image`](https://ai.google.dev/gemini-api/docs/image-generation) via Gemini API (nano-banana)
 
 To generate images, run:
 
 ```bash
 export OPENAI_API_KEY=...
-export OPENROUTER_API_KEY=...
+export GEMINI_API_KEY=...
 uv run generate_images.py
 
 # Convert images/*.png to images/*.webp at 25% size and maximum lossless compresion
@@ -54,6 +55,18 @@ To upload all, run:
 
 ```bash
 gh release upload images images/*.png
+```
+
+To upload only new `nano-banana-2` PNG files (skip assets already in the release), run:
+
+```bash
+./upload.sh
+```
+
+You can also pass a different release name and glob:
+
+```bash
+./upload.sh <release> <glob-pattern>
 ```
 
 ## License
