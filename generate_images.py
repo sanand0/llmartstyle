@@ -7,31 +7,39 @@ import base64
 import httpx
 import json
 import os
+import time
 from dotenv import load_dotenv
 from pathlib import Path
 from typing import Any, Dict
 from tqdm import tqdm
 
 
-def openrouter(model: str, prompt: str) -> bytes:
-    """Generate PNG bytes using OpenRouter (Gemini image preview)."""
-    api_key = os.environ["OPENROUTER_API_KEY"]
-    url = "https://openrouter.ai/api/v1/chat/completions"
+def gemini(model: str, prompt: str) -> bytes:
+    """Generate PNG bytes using the Gemini API."""
+    api_key = os.environ["GEMINI_API_KEY"]
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    prompt = f"{prompt}\n\nOutput requirement: Return only an image. Do not return text."
     payload: Dict[str, Any] = {
-        "model": model,
-        "messages": [{"role": "user", "content": prompt}],
-        "modalities": ["image"],
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"responseModalities": ["IMAGE"]},
     }
-    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-    r = httpx.post(url, headers=headers, json=payload, timeout=None)
-    if r.status_code != 200:
-        raise RuntimeError(f"OpenRouter API error: {r.status_code} {r.text}")
-    data = r.json()
-    try:
-        data_uri: str = data["choices"][0]["message"]["images"][0]["image_url"]["url"]
-    except (IndexError, KeyError):
-        raise RuntimeError(f"Missing .choices[0].message.images[0].image_url.url: {data}")
-    return base64.b64decode(data_uri.split(",", 1)[1])
+    headers = {"x-goog-api-key": api_key, "Content-Type": "application/json"}
+    for attempt in range(3):
+        r = httpx.post(url, headers=headers, json=payload, timeout=None)
+        if r.status_code != 200:
+            raise RuntimeError(f"Gemini API error: {r.status_code} {r.text}")
+        data = r.json()
+        candidate = data.get("candidates", [{}])[0]
+        parts = candidate.get("content", {}).get("parts", [])
+        for part in parts:
+            inline = part.get("inlineData") or part.get("inline_data")
+            if inline and "data" in inline:
+                return base64.b64decode(inline["data"])
+
+        if candidate.get("finishReason") == "NO_IMAGE" and attempt < 2:
+            time.sleep(1.5)
+            continue
+        raise RuntimeError(f"Missing image data in .candidates[0].content.parts: {data}")
 
 
 def openai(model: str, prompt: str) -> bytes:
@@ -56,7 +64,8 @@ def main() -> None:
         full_cfg = json.load(f)
 
     models = [
-        ("nano-banana", lambda p: openrouter("google/gemini-2.5-flash-image-preview", p)),
+        ("nano-banana-2", lambda p: gemini("gemini-3.1-flash-image-preview", p)),
+        ("nano-banana", lambda p: gemini("gemini-2.5-flash-image", p)),
         ("gpt-image-1", lambda p: openai("gpt-image-1", p)),
         ("gpt-image-1.5", lambda p: openai("gpt-image-1.5", p)),
     ]
