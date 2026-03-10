@@ -2,7 +2,7 @@ import { bootstrapAlert } from "https://cdn.jsdelivr.net/npm/bootstrap-alert@1";
 import { html, render } from "https://cdn.jsdelivr.net/npm/lit-html@3/+esm";
 
 const $ = (s, el = document) => el.querySelector(s);
-const models = ["nano-banana-2", "nano-banana", "gpt-image-1", "gpt-image-1.5"]; // column = image, then model
+const models = ["nano-banana-2", "nano-banana", "gpt-image-1.5", "gpt-image-1"]; // column = image, then model
 const releasePngBase = "https://github.com/sanand0/llmartstyle/releases/download/images/";
 const thumbnailSize = 150;
 let modalState = null;
@@ -190,6 +190,9 @@ const renderGrid = (cfg) => {
                     data-bs-target="#imageModal"
                     role="button"
                     title="View image"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
                     src="images/${image.id}.${style.id}.${model}.webp"
                     @load=${(e) => setThumbnailMetrics(e.currentTarget)}
                   />
@@ -204,6 +207,9 @@ const renderGrid = (cfg) => {
 
   render(html`<div class="border rounded overflow-auto">${header}${rows}</div>`, $("#grid"));
   document.querySelectorAll(".comparison-thumb").forEach((imgEl) => {
+    imgEl.loading = "lazy";
+    imgEl.decoding = "async";
+    imgEl.fetchPriority = "low";
     if (imgEl.complete) setThumbnailMetrics(imgEl);
   });
   $("#grid").style.width = `${cfg.images.length * models.length * (thumbnailSize + 10) + 300 + 8}px`;
