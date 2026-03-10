@@ -66,8 +66,8 @@ def main() -> None:
     models = [
         ("nano-banana-2", lambda p: gemini("gemini-3.1-flash-image-preview", p)),
         ("nano-banana", lambda p: gemini("gemini-2.5-flash-image", p)),
-        ("gpt-image-1", lambda p: openai("gpt-image-1", p)),
         ("gpt-image-1.5", lambda p: openai("gpt-image-1.5", p)),
+        ("gpt-image-1", lambda p: openai("gpt-image-1", p)),
     ]
 
     image_root = Path("images")
@@ -77,14 +77,28 @@ def main() -> None:
         for image in cfg["images"]:
             for model_name, generator in models:
                 pbar = tqdm(cfg["styles"], desc=f"{model_name} - {image['id']}")
+                model_quota_exceeded = False
                 for style in pbar:
                     out = image_root / f"{image['id']}.{style['id']}.{model_name}.png"
                     pbar.set_postfix_str(style["id"])
                     if out.exists():
                         continue
+                    if model_quota_exceeded:
+                        tqdm.write(f"  SKIP (quota) {out.name}")
+                        continue
                     prompt = f"{image['prompt']}\nStyle: {style['prompt']}"
-                    png_bytes = generator(prompt)
-                    out.write_bytes(png_bytes)
+                    try:
+                        png_bytes = generator(prompt)
+                        out.write_bytes(png_bytes)
+                    except RuntimeError as e:
+                        msg = str(e)
+                        if "429" in msg or "quota" in msg.lower() or "RESOURCE_EXHAUSTED" in msg:
+                            tqdm.write(f"  QUOTA exceeded for {model_name}, skipping remaining.")
+                            model_quota_exceeded = True
+                        elif any(w in msg.lower() for w in ("safety", "policy", "prohibited", "copyright", "content_filter", "content filter")):
+                            tqdm.write(f"  BLOCKED (policy) {out.name}: {msg[:200]}")
+                        else:
+                            tqdm.write(f"  ERROR {out.name}: {msg[:200]}")
 
 
 if __name__ == "__main__":
