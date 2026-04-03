@@ -18,6 +18,7 @@ LLMs create photos, comics, etc. as easily as unusual illustrations. [I prompted
   - `name`: display name of the style
   - `id`: unique ID for the filename
   - `prompt`: for the LLM to generate
+- `models` on each category: list of model IDs to generate for that category
 
 We currently generate images using:
 
@@ -36,37 +37,39 @@ uv run generate_images.py
 for f in images/*.png; do
   [ -f "${f%.png}.webp" ] && continue
   cwebp -lossless -m 6 -resize $(magick identify -format "%[fx:w*0.25]" "$f") $(magick identify -format "%[fx:h*0.25]" "$f") "$f" -o "${f%.png}.webp"
+  # Use identify if magick doesn't work
+  # cwebp -lossless -m 6 -resize $(identify -format "%[fx:w*0.25]" "$f") $(identify -format "%[fx:h*0.25]" "$f") "$f" -o "${f%.png}.webp"
 done
 ```
 
-This creates `images/<image-id>.<style-id>.<model-id>.webp` for each image x style x model combination.
+This creates `images/<image-id>.<style-id>.<model-id>.webp` for each image x style x configured-model combination.
 
 This is rendered by [`index.html`](index.html) and [`script.js`](script.js) as a static web site.
 
 ## Deploy
 
-The images are on GitHub releases at <https://github.com/sanand0/llmartstyle/releases/tag/images> created via:
+GitHub Releases has a 1,000-asset limit per release, so each top-level category has its own GitHub release tag and upload target:
+
+`art`, `comic`, `map`, `pop`, and `text`.
+
+The site loads images from the matching release tag for each category. Upload a category with:
 
 ```bash
-gh release create images --title "Images" --notes "AI-generated images"
+./upload.sh map
 ```
 
-To upload all, run:
+The uploader creates the release if needed and uploads only the PNGs allowed by that category's `models` list. For example, `map` only uploads `nano-banana-2` and `gpt-image-1.5`.
 
-```bash
-gh release upload images images/*.png
-```
-
-To upload only new `nano-banana-2` PNG files (skip assets already in the release), run:
+To upload every category in one pass, run:
 
 ```bash
 ./upload.sh
 ```
 
-You can also pass a different release name and glob:
+To upload more than one category explicitly, pass multiple IDs:
 
 ```bash
-./upload.sh <release> <glob-pattern>
+./upload.sh pop art
 ```
 
 ## License

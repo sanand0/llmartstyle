@@ -8,6 +8,7 @@ import httpx
 import json
 import os
 import time
+from collections.abc import Callable
 from dotenv import load_dotenv
 from pathlib import Path
 from typing import Any, Dict
@@ -18,7 +19,9 @@ def gemini(model: str, prompt: str) -> bytes:
     """Generate PNG bytes using the Gemini API."""
     api_key = os.environ["GEMINI_API_KEY"]
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-    prompt = f"{prompt}\n\nOutput requirement: Return only an image. Do not return text."
+    prompt = (
+        f"{prompt}\n\nOutput requirement: Return only an image. Do not return text."
+    )
     payload: Dict[str, Any] = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"responseModalities": ["IMAGE"]},
@@ -39,7 +42,9 @@ def gemini(model: str, prompt: str) -> bytes:
         if candidate.get("finishReason") == "NO_IMAGE" and attempt < 2:
             time.sleep(1.5)
             continue
-        raise RuntimeError(f"Missing image data in .candidates[0].content.parts: {data}")
+        raise RuntimeError(
+            f"Missing image data in .candidates[0].content.parts: {data}"
+        )
 
 
 def openai(model: str, prompt: str) -> bytes:
@@ -59,23 +64,31 @@ def openai(model: str, prompt: str) -> bytes:
 
 
 def main() -> None:
-    """Generate images for each style with both models."""
+    """Generate images for each category with its configured models."""
     with open("config.json", "r", encoding="utf-8") as f:
         full_cfg = json.load(f)
 
-    models = [
-        ("nano-banana-2", lambda p: gemini("gemini-3.1-flash-image-preview", p)),
-        ("nano-banana", lambda p: gemini("gemini-2.5-flash-image", p)),
-        ("gpt-image-1.5", lambda p: openai("gpt-image-1.5", p)),
-        ("gpt-image-1", lambda p: openai("gpt-image-1", p)),
-    ]
+    models: dict[str, Callable[[str], bytes]] = {
+        "nano-banana-2": lambda p: gemini("gemini-3.1-flash-image-preview", p),
+        "nano-banana": lambda p: gemini("gemini-2.5-flash-image", p),
+        "gpt-image-1.5": lambda p: openai("gpt-image-1.5", p),
+        "gpt-image-1": lambda p: openai("gpt-image-1", p),
+    }
+    all_model_names = list(models)
 
     image_root = Path("images")
     image_root.mkdir(exist_ok=True)
 
-    for cfg in full_cfg.values():
+    for category_name, cfg in full_cfg.items():
+        category_models = cfg.get("models", all_model_names)
+        unknown_models = sorted(set(category_models) - set(models))
+        if unknown_models:
+            raise ValueError(
+                f"Unknown models in {category_name}: {', '.join(unknown_models)}"
+            )
         for image in cfg["images"]:
-            for model_name, generator in models:
+            for model_name in category_models:
+                generator = models[model_name]
                 pbar = tqdm(cfg["styles"], desc=f"{model_name} - {image['id']}")
                 model_quota_exceeded = False
                 for style in pbar:
@@ -92,10 +105,26 @@ def main() -> None:
                         out.write_bytes(png_bytes)
                     except RuntimeError as e:
                         msg = str(e)
-                        if "429" in msg or "quota" in msg.lower() or "RESOURCE_EXHAUSTED" in msg:
-                            tqdm.write(f"  QUOTA exceeded for {model_name}, skipping remaining.")
+                        if (
+                            "429" in msg
+                            or "quota" in msg.lower()
+                            or "RESOURCE_EXHAUSTED" in msg
+                        ):
+                            tqdm.write(
+                                f"  QUOTA exceeded for {model_name}, skipping remaining."
+                            )
                             model_quota_exceeded = True
-                        elif any(w in msg.lower() for w in ("safety", "policy", "prohibited", "copyright", "content_filter", "content filter")):
+                        elif any(
+                            w in msg.lower()
+                            for w in (
+                                "safety",
+                                "policy",
+                                "prohibited",
+                                "copyright",
+                                "content_filter",
+                                "content filter",
+                            )
+                        ):
                             tqdm.write(f"  BLOCKED (policy) {out.name}: {msg[:200]}")
                         else:
                             tqdm.write(f"  ERROR {out.name}: {msg[:200]}")

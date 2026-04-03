@@ -2,8 +2,12 @@ import { bootstrapAlert } from "https://cdn.jsdelivr.net/npm/bootstrap-alert@1";
 import { html, render } from "https://cdn.jsdelivr.net/npm/lit-html@3/+esm";
 
 const $ = (s, el = document) => el.querySelector(s);
-const models = ["nano-banana-2", "nano-banana", "gpt-image-1.5", "gpt-image-1"]; // column = image, then model
-const releasePngBase = "https://github.com/sanand0/llmartstyle/releases/download/images/";
+const defaultModels = [
+  "nano-banana-2",
+  "nano-banana",
+  "gpt-image-1.5",
+  "gpt-image-1",
+]; // column = image, then model
 const thumbnailSize = 150;
 let modalState = null;
 let pendingModalSrc = "";
@@ -26,8 +30,11 @@ const categoryIds = Object.keys(categories);
 
 const params = new URLSearchParams(window.location.search);
 const paramCategory = params.get("category");
-let currentCategoryId = paramCategory && categories[paramCategory] ? paramCategory : categoryIds[0];
+let currentCategoryId =
+  paramCategory && categories[paramCategory] ? paramCategory : categoryIds[0];
 const currentCategory = categories[currentCategoryId];
+const models = currentCategory.models ?? defaultModels;
+const releasePngBase = `https://github.com/sanand0/llmartstyle/releases/download/${currentCategoryId}/`;
 
 const parseImageIds = (src) => {
   const pathname = new URL(src, location.href).pathname;
@@ -68,7 +75,10 @@ const showHoverPreview = (frameEl) => {
   hoverPreview.alt = imgEl.alt;
   hoverPreview.style.width = `${imgEl.naturalWidth || thumbnailSize}px`;
   hoverPreview.style.height = `${imgEl.naturalHeight || thumbnailSize}px`;
-  hoverPreview.style.setProperty("--thumb-preview-scale", `${imgEl.dataset.coverScale || 1}`);
+  hoverPreview.style.setProperty(
+    "--thumb-preview-scale",
+    `${imgEl.dataset.coverScale || 1}`,
+  );
   syncHoverPreviewPosition();
   hoverPreview.classList.remove("is-active");
   requestAnimationFrame(() => {
@@ -97,7 +107,10 @@ const setThumbnailMetrics = (imgEl) => {
   const frameHeight = frameEl.clientHeight || thumbnailSize;
   const naturalWidth = imgEl.naturalWidth || frameWidth;
   const naturalHeight = imgEl.naturalHeight || frameHeight;
-  const coverScale = Math.max(frameWidth / naturalWidth, frameHeight / naturalHeight);
+  const coverScale = Math.max(
+    frameWidth / naturalWidth,
+    frameHeight / naturalHeight,
+  );
   imgEl.dataset.coverScale = `${coverScale}`;
   imgEl.style.setProperty("--thumb-natural-w", `${naturalWidth}px`);
   imgEl.style.setProperty("--thumb-natural-h", `${naturalHeight}px`);
@@ -146,16 +159,31 @@ $("#category-links").insertAdjacentHTML(
 
 const renderGrid = (cfg) => {
   // Provide only the grid template; import libs in index.html
-  const header = html` <div class="d-flex align-items-stretch border-bottom bg-body-tertiary">
-    <div class="p-2 small text-uppercase fw-semibold text-secondary" style="width: 300px">Style</div>
+  const header = html` <div
+    class="d-flex align-items-stretch border-bottom bg-body-tertiary"
+  >
+    <div
+      class="p-2 small text-uppercase fw-semibold text-secondary"
+      style="width: 300px"
+    >
+      Style
+    </div>
     <div class="flex-grow-1 d-flex flex-row flex-wrap">
       ${cfg.images.map(
         (img) => html`
-          <div class="p-2 border-start text-center" style="width: ${models.length * (thumbnailSize + 10)}px">
+          <div
+            class="p-2 border-start text-center"
+            style="width: ${models.length * (thumbnailSize + 10)}px"
+          >
             <div class="fw-semibold">${img.name}</div>
             <div class="small text-body-secondary">${img.prompt}</div>
             <div class="row">
-              ${models.map((m) => html`<div class="col"><span class="badge text-bg-light border">${m}</span></div>`)}
+              ${models.map(
+                (m) =>
+                  html`<div class="col">
+                    <span class="badge text-bg-light border">${m}</span>
+                  </div>`,
+              )}
             </div>
           </div>
         `,
@@ -168,7 +196,11 @@ const renderGrid = (cfg) => {
       <div class="p-3" style="width: 300px">
         <div class="fw-semibold">${style.name}</div>
         <div class="small text-body-secondary">${style.prompt}</div>
-        <button class="btn btn-sm btn-outline-secondary mt-2" title="Copy prompt" @click=${() => onCopy(style.prompt)}>
+        <button
+          class="btn btn-sm btn-outline-secondary mt-2"
+          title="Copy prompt"
+          @click=${() => onCopy(style.prompt)}
+        >
           <i class="bi bi-clipboard"></i>
           <span class="ms-1">Copy</span>
         </button>
@@ -205,14 +237,18 @@ const renderGrid = (cfg) => {
     </div>`;
   });
 
-  render(html`<div class="border rounded overflow-auto">${header}${rows}</div>`, $("#grid"));
+  render(
+    html`<div class="border rounded overflow-auto">${header}${rows}</div>`,
+    $("#grid"),
+  );
   document.querySelectorAll(".comparison-thumb").forEach((imgEl) => {
     imgEl.loading = "lazy";
     imgEl.decoding = "async";
     imgEl.fetchPriority = "low";
     if (imgEl.complete) setThumbnailMetrics(imgEl);
   });
-  $("#grid").style.width = `${cfg.images.length * models.length * (thumbnailSize + 10) + 300 + 8}px`;
+  $("#grid").style.width =
+    `${cfg.images.length * models.length * (thumbnailSize + 10) + 300 + 8}px`;
 };
 
 renderGrid(categories[currentCategoryId]);
@@ -225,9 +261,15 @@ window.addEventListener("resize", syncHoverPreviewPosition);
 modalEl.addEventListener("show.bs.modal", (e) => {
   if (!e.relatedTarget) return;
   clearHoverPreview();
-  const { imageId, styleId, model } = parseImageIds(e.relatedTarget.getAttribute("src"));
-  const imageIndex = currentCategory.images.findIndex((image) => image.id === imageId);
-  const styleIndex = currentCategory.styles.findIndex((style) => style.id === styleId);
+  const { imageId, styleId, model } = parseImageIds(
+    e.relatedTarget.getAttribute("src"),
+  );
+  const imageIndex = currentCategory.images.findIndex(
+    (image) => image.id === imageId,
+  );
+  const styleIndex = currentCategory.styles.findIndex(
+    (style) => style.id === styleId,
+  );
   const modelIndex = models.indexOf(model);
   if (imageIndex < 0 || styleIndex < 0 || modelIndex < 0) return;
   modalState = { imageIndex, styleIndex, modelIndex };
@@ -245,9 +287,23 @@ document.addEventListener("keydown", (e) => {
   const delta = deltaByKey[e.key];
   if (!delta) return;
   e.preventDefault();
-  const nextModelIndex = clamp(modalState.modelIndex + delta.modelIndex, models.length - 1);
-  const nextStyleIndex = clamp(modalState.styleIndex + delta.styleIndex, currentCategory.styles.length - 1);
-  if (nextModelIndex === modalState.modelIndex && nextStyleIndex === modalState.styleIndex) return;
-  modalState = { ...modalState, modelIndex: nextModelIndex, styleIndex: nextStyleIndex };
+  const nextModelIndex = clamp(
+    modalState.modelIndex + delta.modelIndex,
+    models.length - 1,
+  );
+  const nextStyleIndex = clamp(
+    modalState.styleIndex + delta.styleIndex,
+    currentCategory.styles.length - 1,
+  );
+  if (
+    nextModelIndex === modalState.modelIndex &&
+    nextStyleIndex === modalState.styleIndex
+  )
+    return;
+  modalState = {
+    ...modalState,
+    modelIndex: nextModelIndex,
+    styleIndex: nextStyleIndex,
+  };
   setModalImage(modalState);
 });

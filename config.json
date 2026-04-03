@@ -1,5 +1,11 @@
 {
   "pop": {
+    "models": [
+      "nano-banana-2",
+      "nano-banana",
+      "gpt-image-1.5",
+      "gpt-image-1"
+    ],
     "images": [
       {
         "name": "Astronaut",
@@ -166,6 +172,12 @@
     ]
   },
   "art": {
+    "models": [
+      "nano-banana-2",
+      "nano-banana",
+      "gpt-image-1.5",
+      "gpt-image-1"
+    ],
     "images": [
       {
         "name": "Cafe",
@@ -362,6 +374,12 @@
     ]
   },
   "comic": {
+    "models": [
+      "nano-banana-2",
+      "nano-banana",
+      "gpt-image-1.5",
+      "gpt-image-1"
+    ],
     "images": [
       {
         "name": "Cat",
@@ -523,6 +541,12 @@
     ]
   },
   "text": {
+    "models": [
+      "nano-banana-2",
+      "nano-banana",
+      "gpt-image-1.5",
+      "gpt-image-1"
+    ],
     "images": [
       {
         "name": "Game",
@@ -685,6 +709,181 @@
         "name": "Crystalline ice sculpture typography",
         "id": "crystalline-ice-sculpture-typography",
         "prompt": "Draw crystalline ice sculpture typography floating in an arctic void, translucent frosted letters with internal light refraction, subtle rainbow caustics, delicate snow particles in the air, hyper-realistic ice texture, soft blue-white color palette, 8k."
+      }
+    ]
+  },
+  "map": {
+    "models": [
+      "nano-banana-2",
+      "gpt-image-1.5"
+    ],
+    "images": [
+      {
+        "name": "World",
+        "id": "world",
+        "prompt": "Draw a world map of Earth, showing the major continents, oceans, seas, and polar regions clearly enough to compare across radically different cartographic traditions."
+      },
+      {
+        "name": "Japan",
+        "id": "japan",
+        "prompt": "Draw a country-level map of Japan, including Hokkaido, Honshu, Shikoku, and Kyushu, with surrounding seas and major cities clearly legible for comparison across styles."
+      },
+      {
+        "name": "Kyoto",
+        "id": "kyoto",
+        "prompt": "Draw a city-level map of Kyoto, centered on the Kamo River and the historic grid of central Kyoto, with major districts, temples, roads, and gates clearly legible for comparison across styles."
+      }
+    ],
+    "styles": [
+      {
+        "name": "Babylonian Tablet",
+        "id": "babylonian-tablet",
+        "prompt": "Draw in the style of a Babylonian cuneiform clay tablet map, with incised wedge-shaped markings pressed into earthen ochre clay, a flat circular world disk surrounded by a ring of ocean, Babylon etched as a rectangle at center, mythical islands labeled in cuneiform script at the periphery, cracked and worn surface with faint mineral staining."
+      },
+      {
+        "name": "Anaximander",
+        "id": "anaximander",
+        "prompt": "Draw like an ancient Greek world-disc diagram, rendered on aged papyrus or carved stone, the entire known world as a flat oval landmass encircled by a continuous river-ocean (Okeanos), crude Mediterranean coastlines drawn with confident single strokes, no grid, no projection, only geometric certainty and archaic inscribed Greek labels."
+      },
+      {
+        "name": "Ptolemaic",
+        "id": "ptolemaic",
+        "prompt": "Draw in the style of a Ptolemaic projection map redrawn by Renaissance scholars, on vellum tinted warm ivory, with converging meridian lines fanning from the poles, crude but earnest coastlines of Europe, Africa, and Asia, a vast sealed \"Terra Incognita\" closing the southern ocean, hand-lettered Latin place-names in rounded uncial script, faded washes of green and brown pigment."
+      },
+      {
+        "name": "T-O Mappa",
+        "id": "t-o-mappa",
+        "prompt": "Draw like a medieval T-O mappa mundi, Jerusalem positioned at the absolute center of a perfect circle, the T-bar of the Mediterranean and Nile dividing the disk into Asia above and Europe/Africa below, populated with monstrous creatures at the margins, angels at the cardinal points, illuminated in egg-tempera gold leaf and lapis lazuli on parchment, flat and symbolic with no concern for geographic accuracy."
+      },
+      {
+        "name": "Hereford",
+        "id": "hereford",
+        "prompt": "Draw in the style of the Hereford Mappa Mundi, on animal-skin vellum stained amber and smoke, East at the top with the Garden of Eden and Christ in Majesty presiding, coastlines drawn in dense red ink like fine embroidery, cities shown as walled towers in elevation, sea monsters and dog-headed men illustrated in the oceans, dense Latin annotations packed between every feature."
+      },
+      {
+        "name": "Tabula Rogeriana",
+        "id": "tabula-rogeriana",
+        "prompt": "Draw like Al-Idrisi's Tabula Rogeriana, oriented with south at the top as was Islamic convention, landmasses rendered in elegant geometric shapes, rivers as broad parallel bands of lapis blue, the habitable world divided into seven climate zones by horizontal ruled lines, Arabic script labels in flowing Naskh calligraphy, the whole image suggesting Ptolemaic science filtered through Islamic scholarly grace, on cream-toned vellum."
+      },
+      {
+        "name": "Portolan",
+        "id": "portolan",
+        "prompt": "Draw in the style of a medieval portolan chart on scraped sheepskin vellum, the entire surface crisscrossed by a dense web of rhumb lines radiating from multiple wind roses in sixteen cardinal directions, principal lines in black ink, secondary lines in red and green, coastal outlines traced with obsessive precision while the interior remains blank, port names written perpendicular to the coast in dense Gothic script, scattered heraldic flags marking kingdoms, sea monsters lurking at the edges."
+      },
+      {
+        "name": "Catalan Atlas",
+        "id": "catalan-atlas",
+        "prompt": "Draw like a panel from the Catalan Atlas, combining portolan precision with miniature-painting richness, illustrated camels and merchants on the Silk Road, a golden king of Mali holding a nugget aloft, magnetic compass roses inlaid like rosettes, coastlines in deep India ink, sea routes as fine red capillaries, the whole panel glowing like an illuminated manuscript page in vermillion, ultramarine, and burnished gold."
+      },
+      {
+        "name": "Gangnido",
+        "id": "gangnido",
+        "prompt": "Draw in the style of the Gangnido map, brushed in ink and mineral pigments on Korean mulberry paper, China rendered immense and dominant at center, Korea shown as large as the Arabian Peninsula, Japan tilted and miniaturized, Africa and Europe appearing as wispy peninsular suggestions at the margins, brushwork alternating between broad landscape washes and fine calligraphic labeling."
+      },
+      {
+        "name": "Cheonhado",
+        "id": "cheonhado",
+        "prompt": "Draw like a Cheonhado map, the world enclosed in a perfect circular ocean, a ring of mythical countries (lands of giants, dwarves, feathered people) encircling a recognizable core of China and Korea, the whole rendered in watercolor washes of rust and charcoal on aged Korean paper, concentric rings of sea alternating pale blue and ivory, pictographic mountains rising in profile."
+      },
+      {
+        "name": "Edo Woodblock",
+        "id": "edo-woodblock",
+        "prompt": "Draw in the style of a Japanese Edo-period woodblock-printed map, precise key-block outlines in sumi ink with flat woodblock color washes in indigo, rust, and moss green, place-names in running brush script, decorative cartouches in geometric frames, coastlines clean and angular, cities marked with stylized castle symbols, the overall aesthetic spare and woodgrain-textured."
+      },
+      {
+        "name": "Traiphum",
+        "id": "traiphum",
+        "prompt": "Draw in the style of a Siamese Traiphum cosmographic manuscript, painted in mineral pigments on black lacquered cloth or folded paper, Mount Meru rising as a luminous golden column at the cosmic center, concentric rings of ocean and continent radiating outward in jewel tones of vermillion, malachite green, and gold leaf, guardian giants, nagas, and heavenly beings inhabiting each realm, space flowing as metaphor rather than geography, the whole image simultaneous map, cosmology, and devotional icon."
+      },
+      {
+        "name": "Jambudvipa",
+        "id": "jambudvipa",
+        "prompt": "Draw like a Japanese Buddhist world map of Jambudvīpa, woodblock-printed on cream washi paper, India occupying the sacred and swollen center, China and Japan rendered with geographic care, Europe and the Americas shown as tiny peripheral specks at the margin, mythical lands (the Land of Dwarves, the Land of Long Hair, the Land of Women) illustrated with miniature vignettes in the outer zones, mountain ranges drawn as repeated brushstroke peaks, seas as horizontal wave-pattern fills."
+      },
+      {
+        "name": "Hotan",
+        "id": "hotan",
+        "prompt": "Draw in the style of Hōtan's 1710 map of all countries of Jambudvīpa, with India as the luminous Holy Land centered beneath Mount Meru, surrounding continents drawn in diminishing detail toward the margins, Buddhist temples marked as golden domes, seas filled with stylized wave patterns in pale indigo woodblock ink, the Americas and Europe reduced to marginal curiosities, text labels in flowing Sino-Japanese characters crowding every open space."
+      },
+      {
+        "name": "All under Heaven",
+        "id": "all-under-heaven",
+        "prompt": "Draw in the style of a late Ming Chinese imperial world map, using longitude-degree gridlines inscribed with a compass and ruler, Chinese territories rendered in confident topographic detail with mountain ridges in traditional ink wash, Europe and Africa depicted as minuscule landmasses at the far periphery, mythical kingdoms labelled alongside real ones, cartographic symbols (dots for cities, hatching for mountains) mixing with pictographic landscape painting conventions."
+      },
+      {
+        "name": "Unified Empire",
+        "id": "unified-empire",
+        "prompt": "Draw in the style of a Qing dynasty imperial atlas page, formal and monumental, Western cartographic coordinate symbols and ruled gridlines adopted wholesale but applied to a sinocentric worldview, China's borders rendered in sharp precision while foreign territories blur into vague outlines at the edges, official seals and imperial reign marks dominating the decorative cartouche, printed in dense vermillion and black on fine Chinese paper."
+      },
+      {
+        "name": "Ortelius",
+        "id": "ortelius",
+        "prompt": "Draw in the style of an Abraham Ortelius Renaissance atlas map, engraved in copperplate with exquisite crosshatching for terrain, surrounded by an elaborate strapwork cartouche festooned with putti, allegorical figures, and heraldic shields, the oceans populated with sailing galleons and spouting sea monsters, hand-colored in soft translucent washes of yellow ochre, sky blue, and sage green, place-names in elegant italic letterforms."
+      },
+      {
+        "name": "Blaeu",
+        "id": "blaeu",
+        "prompt": "Draw like a Joan Blaeu atlas page from the Atlas Maior, sumptuously hand-colored on laid paper, a wide decorative border populated with portrait medallions of city views and costumed figures representing local peoples, the main map precise and richly engraved, sea areas filled with compass roses and wind-head cherubs, cartouche framed in baroque acanthus leaves, the overall aesthetic of a luxury object made to be displayed rather than used."
+      },
+      {
+        "name": "Ricci",
+        "id": "ricci",
+        "prompt": "Draw in the style of Matteo Ricci's Kunyu Wanguo Quantu, a monumental six-panel woodblock map in the Chinese tradition but structured on Western projection, China positioned near center but not at the absolute edge, the Americas shown for the first time on a Chinese map, classical Chinese calligraphic annotations describing each country's customs in dense columns, the equator and tropics marked as ruled double lines, the whole image a deliberate act of scientific diplomacy on cream mulberry paper."
+      },
+      {
+        "name": "Stick Chart",
+        "id": "stick-chart",
+        "prompt": "Draw in the style of a Marshall Islands navigational stick chart, an open lattice of curved and crossed coconut frond ribs lashed with pandanus fiber, cowrie shells knotted at specific intersections to mark islands, the curved sticks indicating ocean swell patterns and wave refraction around atolls, the entire object simultaneously sculpture and map, functional knowledge encoded in the flex of organic material."
+      },
+      {
+        "name": "Codex",
+        "id": "codex",
+        "prompt": "Draw in the style of an Aztec pictographic codex map, painted on amatl bark paper in bold flat colors of turquoise, terracotta, and charcoal black, footprint trails indicating routes between settlements, temples shown in elevation as stepped pyramids, place-names rendered as pictographic rebus glyphs combining animal, plant, and body-part symbols, the whole composition non-perspectival and hierarchical rather than scaled, bordered with calendrical day-sign symbols."
+      },
+      {
+        "name": "Mughal Miniature",
+        "id": "mughal-miniature",
+        "prompt": "Draw like a Mughal manuscript map from the Ain-i-Akbari tradition, painted in opaque gouache on fine wasli paper, mountains elevated in three-quarter view as rounded green mounds, rivers as lapis lazuli ribbons flowing between them, cities indicated by schematic mosque and palace silhouettes in gold, the whole scene blending topographic mapping with the visual language of Mughal miniature painting, surrounded by a floral-arabesque illuminated border."
+      },
+      {
+        "name": "Snow Dot Map",
+        "id": "snow-dot-map",
+        "prompt": "Draw in the style of John Snow's 1854 cholera map of Soho, hand-drafted in black ink on pale bluish cartographic paper, street grids rendered in fine ruled lines, each cholera death represented by a stacked black rectangle bar growing from the street frontage, water pump locations marked with precise crosses, the whole image stripped of ornament, its stark geometry making death visible, scientific clarity deployed as moral argument."
+      },
+      {
+        "name": "Ordnance Survey",
+        "id": "ordnance-survey",
+        "prompt": "Draw in the style of a 19th-century British Ordnance Survey map, engraved in fine copperplate and printed in brown and black on cream cartographic paper, contour lines as delicate hachures radiating down hillsides like fine comb teeth, roads classified by precise line weight, benchmarks and triangulation points scattered across the landscape like hieroglyphs, the aesthetic of bureaucratic precision deployed at landscape scale, a parliamentary act made visible."
+      },
+      {
+        "name": "Siamese Boundary",
+        "id": "siamese-boundary",
+        "prompt": "Draw in the style of a late 19th-century Siamese administrative map produced under King Chulalongkorn, a hybrid object: Western trigonometric survey lines and printed latitude/longitude grid overlaid with traditional Thai decorative cartouches and gold-leaf royal insignia, sharp inked borders demarcating territory claimed against colonial pressure, rivers drawn with the confident strokes of Western hydrographic survey but labeled in elegant Thai script, the map simultaneously a legal document and an assertion of sovereignty."
+      },
+      {
+        "name": "Koyano",
+        "id": "koyano",
+        "prompt": "Draw in the style of an early 19th-century Japanese simplified world map for children, woodblock-printed on thin washi in muted indigo and rust with flat hand-coloring, Japan rendered conspicuously large and centrally placed, surrounding countries illustrated with charming vignette figures in native costume at their borders, landmasses simplified to chunky recognizable shapes, seas decorated with stylized wave patterns, the overall visual register of a schoolroom object made with care and cultural confidence."
+      },
+      {
+        "name": "Fra Mauro",
+        "id": "fra-mauro",
+        "prompt": "Draw like the Fra Mauro world map, monumental circular planisphere, south at the top, dense explanatory cartouches, miniature ships and cities, muted jewel pigments on vellum, empirical detail wrapped in lavish medieval ornament."
+      },
+      {
+        "name": "Piri Reis",
+        "id": "piri-reis",
+        "prompt": "Draw like the Piri Reis map, Ottoman portolan fragment aesthetic, animal-skin parchment, bright compass roses, colorful Atlantic coasts, ships and sea notes in Ottoman script, exploratory uncertainty at the edges."
+      },
+      {
+        "name": "Peutinger Table",
+        "id": "peutinger-table",
+        "prompt": "Draw like a Roman Peutinger Table, impossibly long horizontal itinerary scroll, roads as colored linear threads, cities as tiny architectural markers, compressed north-south space, travel-network logic over geographic realism."
+      },
+      {
+        "name": "Bird's-Eye Atlas",
+        "id": "birds-eye-atlas",
+        "prompt": "Draw like a Braun-and-Hogenberg bird’s-eye city atlas plate, oblique aerial viewpoint, walled city in panoramic perspective, engraved buildings and fortifications, decorative banners and cartouches, ships in the harbor, civic spectacle over strict scale."
       }
     ]
   }
