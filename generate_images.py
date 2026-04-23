@@ -48,7 +48,7 @@ def gemini(model: str, prompt: str) -> bytes:
 
 
 def openai(model: str, prompt: str) -> bytes:
-    """Generate PNG bytes using OpenAI gpt-image-1."""
+    """Generate PNG bytes using the OpenAI image generation API."""
     api_key = os.environ["OPENAI_API_KEY"]
     url = "https://api.openai.com/v1/images/generations"
     payload: Dict[str, Any] = {"model": model, "prompt": prompt, "size": "1024x1024"}
@@ -69,6 +69,7 @@ def main() -> None:
         full_cfg = json.load(f)
 
     models: dict[str, Callable[[str], bytes]] = {
+        "gpt-image-2": lambda p: openai("gpt-image-2", p),
         "nano-banana-2": lambda p: gemini("gemini-3.1-flash-image-preview", p),
         "nano-banana": lambda p: gemini("gemini-2.5-flash-image", p),
         "gpt-image-1.5": lambda p: openai("gpt-image-1.5", p),

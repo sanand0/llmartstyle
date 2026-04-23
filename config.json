@@ -1,6 +1,7 @@
 {
   "pop": {
     "models": [
+      "gpt-image-2",
       "nano-banana-2",
       "nano-banana",
       "gpt-image-1.5",
@@ -173,6 +174,7 @@
   },
   "art": {
     "models": [
+      "gpt-image-2",
       "nano-banana-2",
       "nano-banana",
       "gpt-image-1.5",
@@ -375,6 +377,7 @@
   },
   "comic": {
     "models": [
+      "gpt-image-2",
       "nano-banana-2",
       "nano-banana",
       "gpt-image-1.5",
@@ -542,6 +545,7 @@
   },
   "text": {
     "models": [
+      "gpt-image-2",
       "nano-banana-2",
       "nano-banana",
       "gpt-image-1.5",
@@ -714,6 +718,7 @@
   },
   "map": {
     "models": [
+      "gpt-image-2",
       "nano-banana-2",
       "gpt-image-1.5"
     ],

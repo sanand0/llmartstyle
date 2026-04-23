@@ -22,8 +22,10 @@ LLMs create photos, comics, etc. as easily as unusual illustrations. [I prompted
 
 We currently generate images using:
 
+- [`gpt-image-2`](https://developers.openai.com/api/docs/models/gpt-image-2) via OpenAI
 - [`gemini-3.1-flash-image-preview`](https://ai.google.dev/gemini-api/docs/image-generation) via Gemini API (nano-banana-2)
-- [`gpt-image-1`](https://platform.openai.com/docs/models/gpt-image-1) via OpenAI
+- [`gpt-image-1.5`](https://developers.openai.com/api/docs/models/gpt-image-1.5) via OpenAI
+- [`gpt-image-1`](https://developers.openai.com/api/docs/models/gpt-image-1) via OpenAI
 - [`gemini-2.5-flash-image`](https://ai.google.dev/gemini-api/docs/image-generation) via Gemini API (nano-banana)
 
 To generate images, run:
@@ -58,7 +60,7 @@ The site loads images from the matching release tag for each category. Upload a 
 ./upload.sh map
 ```
 
-The uploader creates the release if needed and uploads only the PNGs allowed by that category's `models` list. For example, `map` only uploads `nano-banana-2` and `gpt-image-1.5`.
+The uploader creates the release if needed and uploads only the PNGs allowed by that category's `models` list. For example, `map` only uploads `gpt-image-2`, `nano-banana-2`, and `gpt-image-1.5`.
 
 To upload every category in one pass, run:
 

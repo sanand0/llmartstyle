@@ -2,7 +2,7 @@
 set -euo pipefail
 
 repo="sanand0/llmartstyle"
-all_models_json='["nano-banana-2","nano-banana","gpt-image-1.5","gpt-image-1"]'
+all_models_json='["gpt-image-2","nano-banana-2","nano-banana","gpt-image-1.5","gpt-image-1"]'
 
 if (($#)); then
   categories=("$@")

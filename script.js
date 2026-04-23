@@ -3,6 +3,7 @@ import { html, render } from "https://cdn.jsdelivr.net/npm/lit-html@3/+esm";
 
 const $ = (s, el = document) => el.querySelector(s);
 const defaultModels = [
+  "gpt-image-2",
   "nano-banana-2",
   "nano-banana",
   "gpt-image-1.5",
