@@ -52,7 +52,7 @@ This is rendered by [`index.html`](index.html) and [`script.js`](script.js) as a
 
 GitHub Releases has a 1,000-asset limit per release, so each top-level category has its own GitHub release tag and upload target:
 
-`art`, `comic`, `map`, `pop`, and `text`.
+`art`, `comic`, `map`, `pop`, `text`, `text2`.
 
 The site loads images from the matching release tag for each category. Upload a category with:
 
@@ -77,3 +77,9 @@ To upload more than one category explicitly, pass multiple IDs:
 ## License
 
 [MIT](LICENSE)
+
+<!--
+
+- text2: https://claude.ai/chat/c0fae873-e893-4e18-a161-703dbd451f36
+
+-->

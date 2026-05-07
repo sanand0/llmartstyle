@@ -22,6 +22,8 @@ Upload the images to the server.
 
 Add and commit all files (including prompts.md which I edited) and push.
 
+<!-- codex resume 019dbb7e-fb93-7401-bd32-fadefb805296 --yolo -->
+
 ## Add map styles, 02 Apr 2026
 
 <!--

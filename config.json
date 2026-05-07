@@ -716,6 +716,101 @@
       }
     ]
   },
+  "text2": {
+    "models": [
+      "gpt-image-2",
+      "nano-banana-2"
+    ],
+    "images": [
+      {
+        "name": "Game",
+        "id": "game",
+        "prompt": "Create an instruction manual for the Rock, Paper, Scissors, Lizard, Spock game, explaining it fully. It is a game of chance that expands the traditional game of Rock, Paper, Scissors. The game is an expansion on the game Rock, Paper, Scissors, with the additional hand signs of Lizard (resembling a hand puppet), and Spock (the Vulcan Salute). Each player picks a variable and reveals it at the same time. The winner is the one who defeats the others. In a tie, the process is repeated until a winner is found. Here are the rules: Scissors cuts Paper. Paper covers Rock. Rock crushes Lizard. Lizard poisons Spock. Spock smashes Scissors. Scissors decapitates Lizard. Lizard eats Paper. Paper disproves Spock. Spock vaporizes Rock. Rock crushes Scissors."
+      }
+    ],
+    "styles": [
+      {
+        "name": "Exploded Diagrams",
+        "id": "exploded-diagrams",
+        "prompt": "Draw as Exploded Diagrams. Like a Haynes manual or IKEA parts sheet — a concept pulled apart in 3D isometric space, every component floating and labeled. Originally industrial, but stunning when applied to abstract ideas (\"the anatomy of a good argument\")."
+      },
+      {
+        "name": "Alluvial / Flow Diagrams as Illustration",
+        "id": "alluvial-flow-diagrams-as-illustration",
+        "prompt": "Draw as Alluvial / Flow Diagrams as Illustration. Sankey diagrams done with *texture and color* — flows that look like rivers or silk fabric rather than engineering outputs. Manuel Lima territory. The width carries data; the beauty carries attention."
+      },
+      {
+        "name": "Cross-Section Cutaways",
+        "id": "cross-section-cutaways",
+        "prompt": "Draw as Cross-Section Cutaways. Slice through a system and label what's inside — the NYT \"how it works\" graphic tradition. A submarine, a skyscraper, a workflow, an argument — all become readable when you cut them open. Technical but deeply human. The best ones feel like surgical kindness."
+      },
+      {
+        "name": "Wayfinding System",
+        "id": "wayfinding-system",
+        "prompt": "Draw as Wayfinding System. Airport / transit signage logic applied to content — clean pictograms, bold zone colors, directional chevrons, consistent typographic scale. Massimo Vignelli's NYC subway map energy. Unusually good for showing *how to navigate* a complex space of ideas or decisions."
+      },
+      {
+        "name": "Unit / Dot Charts",
+        "id": "unit-dot-charts",
+        "prompt": "Draw as Unit / Dot Charts. Every individual represented as one dot or icon — then arranged to show patterns. The Pudding's signature move (\"film dialogue\", \"music by gender\"). Feels democratic and humanizing. The magic is that you can *see* every case while still seeing the aggregate shape."
+      },
+      {
+        "name": "Small Multiples Grid",
+        "id": "small-multiples-grid",
+        "prompt": "Draw as Small Multiples Grid. The same visual form repeated dozens of times across a grid, each instance slightly different — Tufte's most powerful idea. Comparison becomes effortless because your eye does the work. Elegant when the repeated unit is itself beautifully designed."
+      },
+      {
+        "name": "Layered Transparency Stack",
+        "id": "layered-transparency-stack",
+        "prompt": "Draw as Layered Transparency Stack. Multiple semi-transparent planes stacked in 3D — each layer adds one variable or lens. Like Figma components or overhead projector acetates, but designed with intention. The *stack* is the argument: alone each layer is incomplete, together they create the full picture."
+      },
+      {
+        "name": "Narrative Maps",
+        "id": "narrative-maps",
+        "prompt": "Draw as Narrative Maps. Concepts laid out as *geography* — mountains of difficulty, rivers of flow, cities of key ideas. The reader navigates rather than reads. Tolkien's Middle Earth meets information design. Gorgeous when hand-lettered with terrain textures."
+      },
+      {
+        "name": "Naturalist Field Notes",
+        "id": "naturalist-field-notes",
+        "prompt": "Draw as Naturalist Field Notes. The Humboldt / Darwin aesthetic — specimen sketches with Latin-style annotations, margins full of handwritten observations, pressed-flower energy. Treats ideas like discovered organisms. Works beautifully for research synthesis or concept exploration."
+      },
+      {
+        "name": "Broadsheets / Zines",
+        "id": "broadsheets-zines",
+        "prompt": "Draw as Broadsheets / Zines. One-page newspaper or punk zine aesthetic — chaotic typographic hierarchy, cut-and-paste textures, column layouts, fake classifieds. Conveys urgency and irreverence. The Occupied Times meets McLuhan."
+      },
+      {
+        "name": "Card Decks as Systems",
+        "id": "card-decks-as-systems",
+        "prompt": "Draw as Card Decks as Systems. Ideas rendered as a *deck of cards* — each card self-contained, suits encoding categories, face cards for key archetypes. The format implies shufflability, which implies modularity. Tarot-influenced variants add symbolic layering."
+      },
+      {
+        "name": "Memory Palaces (Visual Architecture)",
+        "id": "memory-palaces-visual-architecture",
+        "prompt": "Draw as Memory Palaces (Visual Architecture). Literally drawing a *building* or room where ideas live — the foyer holds the introduction, each room a chapter, the attic holds speculation. Rooted in the ancient Method of Loci. Architectural illustration meets rhetoric."
+      },
+      {
+        "name": "Storyboard Grids",
+        "id": "storyboard-grids",
+        "prompt": "Draw as Storyboard Grids. Cinematic panels, each a moment — camera angles, cutaways, close-ups — but applied to ideas. Bergman planning a lecture. The format forces you to think in *scenes* rather than bullets."
+      },
+      {
+        "name": "Annotated Manuscripts",
+        "id": "annotated-manuscripts",
+        "prompt": "Draw as Annotated Manuscripts. A central text or image *surrounded* by marginalia — medieval monks meets Talmud commentary meets Twitter quote-tweets. Multiple voices, layers of time, arguments in the margins. Dense and rewarding to read slowly."
+      },
+      {
+        "name": "Game Boards",
+        "id": "game-boards",
+        "prompt": "Draw as Game Boards. The content as a *playable space* — snakes & ladders of a learning journey, hex maps of strategic options, a Clue-style grid of suspects and evidence. Converts passive reading into felt movement through a system."
+      },
+      {
+        "name": "Scientific Poster (Golden Age)",
+        "id": "scientific-poster-golden-age",
+        "prompt": "Draw as Scientific Poster (Golden Age). 1920s–1950s expedition aesthetic — bold lithographic colors, serif headlines, compass roses, altitude profiles. Combines data rigor with romantic wonder. Feels like a WWF conservation poster meets a Soviet propaganda chart."
+      }
+    ]
+  },
   "map": {
     "models": [
       "gpt-image-2",
