@@ -2,10 +2,7 @@
   "pop": {
     "models": [
       "gpt-image-2",
-      "nano-banana-2",
-      "nano-banana",
-      "gpt-image-1.5",
-      "gpt-image-1"
+      "nano-banana-2"
     ],
     "images": [
       {
@@ -175,10 +172,7 @@
   "art": {
     "models": [
       "gpt-image-2",
-      "nano-banana-2",
-      "nano-banana",
-      "gpt-image-1.5",
-      "gpt-image-1"
+      "nano-banana-2"
     ],
     "images": [
       {
@@ -378,10 +372,7 @@
   "comic": {
     "models": [
       "gpt-image-2",
-      "nano-banana-2",
-      "nano-banana",
-      "gpt-image-1.5",
-      "gpt-image-1"
+      "nano-banana-2"
     ],
     "images": [
       {
@@ -546,10 +537,7 @@
   "text": {
     "models": [
       "gpt-image-2",
-      "nano-banana-2",
-      "nano-banana",
-      "gpt-image-1.5",
-      "gpt-image-1"
+      "nano-banana-2"
     ],
     "images": [
       {
@@ -814,8 +802,7 @@
   "map": {
     "models": [
       "gpt-image-2",
-      "nano-banana-2",
-      "gpt-image-1.5"
+      "nano-banana-2"
     ],
     "images": [
       {
