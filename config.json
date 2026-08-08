@@ -383,34 +383,49 @@
     ],
     "styles": [
       {
-        "name": "Ligne Claire",
-        "id": "ligne-claire",
-        "prompt": "Hergé's signature style: uniform thin unvarying ink outlines on every element, flat color fills with zero gradients or texture, cast shadows drawn as hard-edged colored shapes rather than tone shifts, photorealistic architectural backgrounds contrasting with simplified round-faced expressive characters"
+        "name": "Elegant Brush Line",
+        "id": "elegant-brush-line",
+        "prompt": "Hugo Pratt's Corto Maltese: a face built from five or six confident brush strokes, thick-to-thin tapering outlines, large areas of untouched white paper, blacks placed sparingly as design accents rather than shadow, sea air and relaxed pacing, no rendering anywhere"
       },
       {
-        "name": "Overbite Flat",
-        "id": "overbite-flat",
-        "prompt": "Jaundiced flat skin tones with no shading, protruding underbite jaw on every adult character, bulging perfectly circular eyes with tiny pinprick pupils, four-fingered hands, bloated rubbery silhouettes, thick black outlines, solid color fills with no gradients, suburban American interiors"
+        "name": "Spot Black Economy",
+        "id": "spot-black-economy",
+        "prompt": "Alex Toth's design discipline: everything unnecessary deleted, figures read as strong silhouettes, shadow given as a few large simple black shapes rather than modelling, clean staging with clear eyelines, fluid motion suggested by pose alone, animation-storyboard clarity"
       },
       {
-        "name": "Roundhead",
-        "id": "roundhead",
-        "prompt": "Charles Schulz's Peanuts aesthetic: perfectly circular heads occupying a third of total body height, dot eyes and minimal curved mouth, sparse empty backgrounds with a single ground line, childlike rounded anatomy conveying profound emotional nuance through the subtlest shift in eyebrow position"
+        "name": "Flat Icon",
+        "id": "flat-icon",
+        "prompt": "Marjane Satrapi's Persepolis: thick even outlines with solid black clothing, hair and skies, no shading or modelling of any kind, faces reduced to a few symbolic marks, crowds drawn as repeating flat silhouettes, childlike directness carrying heavy political subject matter"
       },
       {
-        "name": "Kirby Cosmic",
-        "id": "kirby-cosmic",
-        "prompt": "Jack Kirby's Marvel and DC visual language: massive square-jawed figures with fists the size of heads, vertiginous forced-perspective distortion, crackling 'Kirby Krackle' — fields of inked black dots representing cosmic energy — monolithic rectangular machinery, universe-scale drama in every panel"
+        "name": "Ratty Line",
+        "id": "ratty-line",
+        "prompt": "Gary Panter's punk cartooning: deliberately ugly wobbling ink lines drawn fast and unfixed, crude anatomy, jagged hand-cut panel borders, xerox grain and blotchy fills, visual noise and mistakes left in as attitude, zine-photocopy energy"
       },
       {
-        "name": "Golden Age",
-        "id": "golden-age",
-        "prompt": "1940s DC and Timely Comics heroic ideal: anatomically idealized figures in primary-colored tights and capes, diagonal flying poses with fist forward, flat ink fills with simple hatched muscle shading, bold hand-lettered sound effects, patriotic red-white-blue palette, square-jawed determination"
+        "name": "Gekiga Plain",
+        "id": "gekiga-plain",
+        "prompt": "Yoshihiro Tatsumi's 1970s short stories: plain unshowy drawing of ordinary salarymen and cramped apartments, functional realism with no virtuoso detail, blank staring faces, flat documentary camera, heavy blacks used for grime rather than drama, bleak understated adult tone"
       },
       {
-        "name": "Silver Age",
-        "id": "silver-age",
-        "prompt": "1960s Marvel and DC aesthetic as later immortalized by Roy Lichtenstein: Ben-Day halftone dot shading on skin and backgrounds, thought-bubble narration boxes mid-panel, clean anatomical perfection in chrome-bright primary colors, earnest melodramatic dialogue, cosmic villains with ornate helmet designs"
+        "name": "Obsessive Horror Line",
+        "id": "obsessive-horror-line",
+        "prompt": "Junji Ito's technique: bright empty backgrounds interrupted by one hyper-rendered object, skin and hair drawn with thousands of patient fine strokes, spirals and holes and body deformation given loving anatomical detail, calm ordinary faces beside impossible bodies"
+      },
+      {
+        "name": "Clinical Grotesque",
+        "id": "clinical-grotesque",
+        "prompt": "Charles Burns's Black Hole: perfectly smooth even-weight contour lines with zero wobble, solid blacks shaped like polished cut-out card, glossy 1950s advertising cleanliness applied to bodily horror and mutation, suburban teenagers rendered with unsettling clinical calm"
+      },
+      {
+        "name": "Editorial Caricature",
+        "id": "editorial-caricature",
+        "prompt": "Honoré Daumier and Thomas Nast tradition continued in modern political cartooning: grotesquely exaggerated facial feature on a tiny body, political symbolism embedded in every prop, heavy crosshatch shading building dramatic volume, visual metaphors doing the entire satirical argument, newspaper column proportions"
+      },
+      {
+        "name": "Screentone Realism",
+        "id": "screentone-realism",
+        "prompt": "Katsuhiro Otomo and Naoki Urasawa: grey tones supplied entirely by adhesive halftone dot sheets rather than hatching, ruler-precise perspective on streets, machinery and collapsing concrete, restrained clean character line, wide cinematic establishing panels, tone gradients used for sky and distance"
       },
       {
         "name": "Underground Comix",
@@ -423,79 +438,9 @@
         "prompt": "James Thurber and Peter Arno tradition: single-panel wit in refined sparse pen linework, sophisticated grey wash tones, no color, narrative entirely implied through posture and props, Manhattan professional-class settings, caption below rather than speech bubble, cultivated restraint"
       },
       {
-        "name": "British Anarchic",
-        "id": "british-anarchic",
-        "prompt": "Beano and Dandy tradition pioneered by Leo Baxendale: red-cheeked slapstick chaos, striped jerseys and school uniforms, motion lines erupting from every impact, chaotic overlapping multi-figure layouts, bold primary fills with heavy ink borders, unrepentant mischief as the moral universe"
-      },
-      {
-        "name": "Varsity Wholesome",
-        "id": "varsity-wholesome",
-        "prompt": "Archie Comics house style: big-haired wholesome mid-century American teens, clean confident brushwork with simple hatched shadows, retro 1950s letter-jacket clothing detail, cheerful flat pastel palette with pop highlights, wholesome romantic triangle dynamics, perpetual high school summer"
-      },
-      {
-        "name": "Cherub Friendly",
-        "id": "cherub-friendly",
-        "prompt": "Harvey Comics ghost-and-monster-as-friend aesthetic: chubby baby-faced round forms in white with pink blush, enormous doe eyes, soft thick outlines, pastel backgrounds in mint and lavender, gentle humor requiring no menace or edge, broad appeal across every age"
-      },
-      {
-        "name": "EC Horror",
-        "id": "ec-horror",
-        "prompt": "William Gaines's EC Comics with artists Jack Davis and Wally Wood: rotting textural decay rendered in loving hatched detail, dripping visceral gore played for grotesque comedy, ironic twist-panel staging, extreme expression distortion, murky swampy green-purple palette, moralistic last-panel punishment"
-      },
-      {
-        "name": "Franco-Belgian Adventure",
-        "id": "franco-belgian-adventure",
-        "prompt": "Moebius and the Métal Hurlant school: cinematic widescreen panel compositions, richly painted European stone architecture and cobblestone streets, lush detailed natural environments, heroic adventure figure work in realistic but stylized anatomy, warm golden-hour color palettes, deliberate pacing"
-      },
-      {
-        "name": "Gaulish Romp",
-        "id": "gaulish-romp",
-        "prompt": "Goscinny and Uderzo's Asterix visual language: barrel-chested warriors in winged helmets with exaggerated Roman-nose profiles, comedic mid-air brawl compositions with stars and birds circling stunned figures, village feast spread as centrepiece panorama, bold flat outline fills, warm Mediterranean palette"
-      },
-      {
-        "name": "Manhwa Romance",
-        "id": "manhwa-romance",
-        "prompt": "Korean webtoon romance genre visual language: impossibly elongated elegant figures with swan necks, soft pastel gradient skin tones with watercolor blush, hyper-detailed flowing hair and couture fashion, vertical scroll-native panel composition, soft bloom lighting during emotional peaks"
-      },
-      {
-        "name": "Manhua Wuxia",
-        "id": "manhua-wuxia",
-        "prompt": "Chinese martial arts comics tradition: ink-wash atmospheric mountain landscapes, flowing silk robe folds rendered in traditional brushstroke calligraphy, dynamic mid-air swordplay with trailing ribbon motion, classical pavilion and pagoda architecture, bold red-gold accent palette on ink-black line"
-      },
-      {
-        "name": "Fumetti Photo",
-        "id": "fumetti-photo",
-        "prompt": "Italian photocomics tradition popular from the 1950s: photographic real-actor faces with speech bubbles overlaid in graphic design software, high-contrast studio dramatic lighting, pulp melodrama staging with telenovela emotional extremity, bold sans-serif typography dominating the visual field"
-      },
-      {
-        "name": "Soviet Graphic",
-        "id": "soviet-graphic",
-        "prompt": "El Lissitzky and Alexander Rodchenko constructivist tradition applied to comics: stark diagonal compositional geometry, heroic worker and soldier silhouettes reduced to clean shapes, severe red-black-cream three-color palette maximum, propaganda-poster visual weight, woodblock print texture on every surface"
-      },
-      {
-        "name": "Indian Mythological",
-        "id": "indian-mythological",
-        "prompt": "Amar Chitra Katha visual tradition: jewel-saturated devotional colors — deep lapis, vermillion, gold — ornate gilded embroidery on every costume, expressive two-armed figures in formal seated or standing poses, lotus-and-vine border motifs framing every panel"
-      },
-      {
-        "name": "African Pattern",
-        "id": "african-pattern",
-        "prompt": "Pan-African comics tradition drawing on Kente, Ndebele, and Adinkra visual heritage: bold tribal geometry integrated into panel borders and environmental backgrounds, warm earth-ochre-terracotta palette, stylized human figures in everyday contexts, rhythmic repeating motifs as decorative framing and background texture"
-      },
-      {
-        "name": "Editorial Caricature",
-        "id": "editorial-caricature",
-        "prompt": "Honoré Daumier and Thomas Nast tradition continued in modern political cartooning: grotesquely exaggerated facial feature on a tiny body, political symbolism embedded in every prop, heavy crosshatch shading building dramatic volume, visual metaphors doing the entire satirical argument, newspaper column proportions"
-      },
-      {
-        "name": "Hanna-Barbera",
-        "id": "hanna-barbera",
-        "prompt": "1960s Hanna-Barbera television animation house style: thick black outlines on simple rounded anthropomorphic animal characters, flat single-tone pastel background environments suggesting location rather than depicting it, limited-animation implied stasis between keyframe poses, cheerful action with minimal rendered detail"
-      },
-      {
-        "name": "Graphic Memoir",
-        "id": "graphic-memoir",
-        "prompt": "Autobiographical graphic memoir tradition: scratchy intimate linework with visible hand-tremor, raw black-ink wash expressiveness, claustrophobic first-person panel framing, emotional vulnerability encoded in anatomically imperfect self-portraiture, muted autobiographical color restraint"
+        "name": "Strip Noir",
+        "id": "strip-noir",
+        "prompt": "Milton Caniff and Alex Raymond's newspaper adventure strips: heavy brush blacks and venetian-blind shadow stripes, cinematic camera angles inside a narrow horizontal strip, glamorous realistic figures, feathered brush shading on faces, hand-lettered dialogue crowding the top of each panel"
       },
       {
         "name": "Neo-Noir",
@@ -503,24 +448,49 @@
         "prompt": "Neo-noir graphic novel visual language: absolute maximum-contrast black and white with a single strategic accent color — red, yellow, or blue — bleeding through, rain-slicked reflective street surfaces, deep shadow pools consuming entire figures, harsh diagonal panel compositions, existential urban dread without irony"
       },
       {
-        "name": "Webtoon",
-        "id": "webtoon",
-        "prompt": "Korean digital webtoon format native aesthetic: phone-portrait-optimized infinite vertical canvas, cinematic horizontal establishing shots transitioning to close emotional beats, clean digital brushwork with precise line confidence, soft Korean drama atmospheric color grading, silence panels held longer than print would allow"
+        "name": "Baroque Pen",
+        "id": "baroque-pen",
+        "prompt": "Sergio Toppi's page: hair, cloth, rock and smoke dissolve into dense decorative pattern rather than being drawn as objects, crosshatching and stippling packed into tight ornamental clusters, figures floating on bare white paper with no panel borders, extreme vertical compositions"
       },
       {
-        "name": "Sunday Funnies",
-        "id": "sunday-funnies",
-        "prompt": "Winsor McCay's Little Nemo and George Herriman's Krazy Kat tradition: full broadsheet horizontal strip with room to breathe, art nouveau decorative border flourishes, original watercolor Sunday edition fills, surreal slapstick staging with architectural environments as active participants, rounded nostalgic hand lettering"
+        "name": "Stipple Engraving",
+        "id": "stipple-engraving",
+        "prompt": "Virgil Finlay and Franklin Booth's pen technique: tone built entirely from thousands of tiny dots and hair-thin parallel strokes, silvery photographic gradients with no visible outline, glowing rim-lit figures, banknote-engraving precision, luminous eerie stillness"
       },
       {
-        "name": "Dia de Muertos",
-        "id": "dia-de-muertos",
-        "prompt": "José Guadalupe Posada's calavera tradition: skeleton figures with elaborately flower-adorned sugar-skull faces, deep marigold orange and royal purple palette, papel picado perforated tissue-paper lace motifs as panel borders and backgrounds, festive celebratory composition treating death as communal reunion"
+        "name": "Roundhead",
+        "id": "roundhead",
+        "prompt": "Charles Schulz's Peanuts aesthetic: perfectly circular heads occupying a third of total body height, dot eyes and minimal curved mouth, sparse empty backgrounds with a single ground line, childlike rounded anatomy conveying profound emotional nuance through the subtlest shift in eyebrow position"
       },
       {
-        "name": "Sprite Comic",
-        "id": "sprite-comic",
-        "prompt": "Early 2000s webcomic pixel-sprite tradition: 16-bit character sprites lifted from 1990s SNES and Sega console games, health bar and dialogue box HUD overlays, strict four-color per-character palette constraint, lo-fi charm weaponized for deadpan verbal humor, static poses carrying all comedic weight"
+        "name": "Ligne Claire",
+        "id": "ligne-claire",
+        "prompt": "Hergé's signature style: uniform thin unvarying ink outlines on every element, flat color fills with zero gradients or texture, cast shadows drawn as hard-edged colored shapes rather than tone shifts, photorealistic architectural backgrounds contrasting with simplified round-faced expressive characters"
+      },
+      {
+        "name": "Overbite Flat",
+        "id": "overbite-flat",
+        "prompt": "Jaundiced flat skin tones with no shading, protruding underbite jaw on every adult character, bulging perfectly circular eyes with tiny pinprick pupils, four-fingered hands, bloated rubbery silhouettes, thick black outlines, solid color fills with no gradients, suburban American interiors"
+      },
+      {
+        "name": "Varsity Wholesome",
+        "id": "varsity-wholesome",
+        "prompt": "Archie Comics house style: big-haired wholesome mid-century American teens, clean confident brushwork with simple hatched shadows, retro 1950s letter-jacket clothing detail, cheerful flat pastel palette with pop highlights, wholesome romantic triangle dynamics, perpetual high school summer"
+      },
+      {
+        "name": "Gaulish Romp",
+        "id": "gaulish-romp",
+        "prompt": "Goscinny and Uderzo's Asterix visual language: barrel-chested warriors in winged helmets with exaggerated Roman-nose profiles, comedic mid-air brawl compositions with stars and birds circling stunned figures, village feast spread as centrepiece panorama, bold flat outline fills, warm Mediterranean palette"
+      },
+      {
+        "name": "Hanna-Barbera",
+        "id": "hanna-barbera",
+        "prompt": "1960s Hanna-Barbera television animation house style: thick black outlines on simple rounded anthropomorphic animal characters, flat single-tone pastel background environments suggesting location rather than depicting it, limited-animation implied stasis between keyframe poses, cheerful action with minimal rendered detail"
+      },
+      {
+        "name": "Indian Mythological",
+        "id": "indian-mythological",
+        "prompt": "Amar Chitra Katha visual tradition: jewel-saturated devotional colors — deep lapis, vermillion, gold — ornate gilded embroidery on every costume, expressive two-armed figures in formal seated or standing poses, lotus-and-vine border motifs framing every panel"
       },
       {
         "name": "Vertigo Dark",
@@ -543,24 +513,9 @@
         "prompt": "Lynd Ward and Frans Masereel's wordless novels: chunky carved shapes with visible gouge marks, no speech or captions at all, monumental low-angle compositions, hard-edged rays of light cutting diagonally across factory and city forms, angular expressionist faces, one full-page image per story beat"
       },
       {
-        "name": "Baroque Pen",
-        "id": "baroque-pen",
-        "prompt": "Sergio Toppi's page: hair, cloth, rock and smoke dissolve into dense decorative pattern rather than being drawn as objects, crosshatching and stippling packed into tight ornamental clusters, figures floating on bare white paper with no panel borders, extreme vertical compositions"
-      },
-      {
-        "name": "Stipple Engraving",
-        "id": "stipple-engraving",
-        "prompt": "Virgil Finlay and Franklin Booth's pen technique: tone built entirely from thousands of tiny dots and hair-thin parallel strokes, silvery photographic gradients with no visible outline, glowing rim-lit figures, banknote-engraving precision, luminous eerie stillness"
-      },
-      {
         "name": "Slab Shadow",
         "id": "slab-shadow",
         "prompt": "Mike Mignola's construction: figures simplified to angular geometric planes, shadows drawn as large flat abstract black slabs that ignore real light logic, rubble and architecture reduced to rectangles, sparse thick contour line, deep stage-like empty space around every figure"
-      },
-      {
-        "name": "Clinical Grotesque",
-        "id": "clinical-grotesque",
-        "prompt": "Charles Burns's Black Hole: perfectly smooth even-weight contour lines with zero wobble, solid blacks shaped like polished cut-out card, glossy 1950s advertising cleanliness applied to bodily horror and mutation, suburban teenagers rendered with unsettling clinical calm"
       },
       {
         "name": "Expressionist Brush",
@@ -568,54 +523,14 @@
         "prompt": "Alberto Breccia and José Muñoz: dirty unpredictable blacks with dry-brush drag and spatter, faces distorted into caricature under harsh light, ink applied like paint rather than drawn, backgrounds collapsing into abstract stains, nervous unstable energy"
       },
       {
-        "name": "Elegant Brush Line",
-        "id": "elegant-brush-line",
-        "prompt": "Hugo Pratt's Corto Maltese: a face built from five or six confident brush strokes, thick-to-thin tapering outlines, large areas of untouched white paper, blacks placed sparingly as design accents rather than shadow, sea air and relaxed pacing, no rendering anywhere"
-      },
-      {
-        "name": "Spot Black Economy",
-        "id": "spot-black-economy",
-        "prompt": "Alex Toth's design discipline: everything unnecessary deleted, figures read as strong silhouettes, shadow given as a few large simple black shapes rather than modelling, clean staging with clear eyelines, fluid motion suggested by pose alone, animation-storyboard clarity"
-      },
-      {
-        "name": "Strip Noir",
-        "id": "strip-noir",
-        "prompt": "Milton Caniff and Alex Raymond's newspaper adventure strips: heavy brush blacks and venetian-blind shadow stripes, cinematic camera angles inside a narrow horizontal strip, glamorous realistic figures, feathered brush shading on faces, hand-lettered dialogue crowding the top of each panel"
-      },
-      {
         "name": "Diagrammatic Grid",
         "id": "diagrammatic-grid",
         "prompt": "Chris Ware's architecture of the page: ruler-drawn hairline linework with no hand wobble, tiny figures inside vast precise interiors, panels shrinking to postage-stamp size in strict modular grids, arrows and cutaway diagrams and instruction-manual typography as narration, deadpan emotional flatness"
       },
       {
-        "name": "Flat Icon",
-        "id": "flat-icon",
-        "prompt": "Marjane Satrapi's Persepolis: thick even outlines with solid black clothing, hair and skies, no shading or modelling of any kind, faces reduced to a few symbolic marks, crowds drawn as repeating flat silhouettes, childlike directness carrying heavy political subject matter"
-      },
-      {
-        "name": "Screentone Realism",
-        "id": "screentone-realism",
-        "prompt": "Katsuhiro Otomo and Naoki Urasawa: grey tones supplied entirely by adhesive halftone dot sheets rather than hatching, ruler-precise perspective on streets, machinery and collapsing concrete, restrained clean character line, wide cinematic establishing panels, tone gradients used for sky and distance"
-      },
-      {
-        "name": "Gekiga Plain",
-        "id": "gekiga-plain",
-        "prompt": "Yoshihiro Tatsumi's 1970s short stories: plain unshowy drawing of ordinary salarymen and cramped apartments, functional realism with no virtuoso detail, blank staring faces, flat documentary camera, heavy blacks used for grime rather than drama, bleak understated adult tone"
-      },
-      {
         "name": "Shojo Reverie",
         "id": "shojo-reverie",
         "prompt": "Moto Hagio and the 1970s shojo school: elongated fragile figures with enormous starred eyes, panels tilting and breaking open so figures float free of borders, screentone flowers and sparkles filling emotional beats, feathery fine lines, interior monologue text drifting across the page"
-      },
-      {
-        "name": "Obsessive Horror Line",
-        "id": "obsessive-horror-line",
-        "prompt": "Junji Ito's technique: bright empty backgrounds interrupted by one hyper-rendered object, skin and hair drawn with thousands of patient fine strokes, spirals and holes and body deformation given loving anatomical detail, calm ordinary faces beside impossible bodies"
-      },
-      {
-        "name": "Ratty Line",
-        "id": "ratty-line",
-        "prompt": "Gary Panter's punk cartooning: deliberately ugly wobbling ink lines drawn fast and unfixed, crude anatomy, jagged hand-cut panel borders, xerox grain and blotchy fills, visual noise and mistakes left in as attitude, zine-photocopy energy"
       },
       {
         "name": "Ornamental Dream",
@@ -631,6 +546,91 @@
         "name": "Sumi Memoir",
         "id": "sumi-memoir",
         "prompt": "Keum Suk Gendry-Kim's Grass: broad wet ink-brush washes across full pages, trees and water reduced to a few calligraphic gestures, figures small inside empty landscape, black bleeding and pooling with visible brush hairs, long silent panels of grass and rain carrying grief"
+      },
+      {
+        "name": "Kirby Cosmic",
+        "id": "kirby-cosmic",
+        "prompt": "Jack Kirby's Marvel and DC visual language: massive square-jawed figures with fists the size of heads, vertiginous forced-perspective distortion, crackling 'Kirby Krackle' — fields of inked black dots representing cosmic energy — monolithic rectangular machinery, universe-scale drama in every panel"
+      },
+      {
+        "name": "Golden Age",
+        "id": "golden-age",
+        "prompt": "1940s DC and Timely Comics heroic ideal: anatomically idealized figures in primary-colored tights and capes, diagonal flying poses with fist forward, flat ink fills with simple hatched muscle shading, bold hand-lettered sound effects, patriotic red-white-blue palette, square-jawed determination"
+      },
+      {
+        "name": "Silver Age",
+        "id": "silver-age",
+        "prompt": "1960s Marvel and DC aesthetic as later immortalized by Roy Lichtenstein: Ben-Day halftone dot shading on skin and backgrounds, thought-bubble narration boxes mid-panel, clean anatomical perfection in chrome-bright primary colors, earnest melodramatic dialogue, cosmic villains with ornate helmet designs"
+      },
+      {
+        "name": "British Anarchic",
+        "id": "british-anarchic",
+        "prompt": "Beano and Dandy tradition pioneered by Leo Baxendale: red-cheeked slapstick chaos, striped jerseys and school uniforms, motion lines erupting from every impact, chaotic overlapping multi-figure layouts, bold primary fills with heavy ink borders, unrepentant mischief as the moral universe"
+      },
+      {
+        "name": "EC Horror",
+        "id": "ec-horror",
+        "prompt": "William Gaines's EC Comics with artists Jack Davis and Wally Wood: rotting textural decay rendered in loving hatched detail, dripping visceral gore played for grotesque comedy, ironic twist-panel staging, extreme expression distortion, murky swampy green-purple palette, moralistic last-panel punishment"
+      },
+      {
+        "name": "Cherub Friendly",
+        "id": "cherub-friendly",
+        "prompt": "Harvey Comics ghost-and-monster-as-friend aesthetic: chubby baby-faced round forms in white with pink blush, enormous doe eyes, soft thick outlines, pastel backgrounds in mint and lavender, gentle humor requiring no menace or edge, broad appeal across every age"
+      },
+      {
+        "name": "Franco-Belgian Adventure",
+        "id": "franco-belgian-adventure",
+        "prompt": "Moebius and the Métal Hurlant school: cinematic widescreen panel compositions, richly painted European stone architecture and cobblestone streets, lush detailed natural environments, heroic adventure figure work in realistic but stylized anatomy, warm golden-hour color palettes, deliberate pacing"
+      },
+      {
+        "name": "Manhwa Romance",
+        "id": "manhwa-romance",
+        "prompt": "Korean webtoon romance genre visual language: impossibly elongated elegant figures with swan necks, soft pastel gradient skin tones with watercolor blush, hyper-detailed flowing hair and couture fashion, vertical scroll-native panel composition, soft bloom lighting during emotional peaks"
+      },
+      {
+        "name": "Manhua Wuxia",
+        "id": "manhua-wuxia",
+        "prompt": "Chinese martial arts comics tradition: ink-wash atmospheric mountain landscapes, flowing silk robe folds rendered in traditional brushstroke calligraphy, dynamic mid-air swordplay with trailing ribbon motion, classical pavilion and pagoda architecture, bold red-gold accent palette on ink-black line"
+      },
+      {
+        "name": "Fumetti Photo",
+        "id": "fumetti-photo",
+        "prompt": "Italian photocomics tradition popular from the 1950s: photographic real-actor faces with speech bubbles overlaid in graphic design software, high-contrast studio dramatic lighting, pulp melodrama staging with telenovela emotional extremity, bold sans-serif typography dominating the visual field"
+      },
+      {
+        "name": "Soviet Graphic",
+        "id": "soviet-graphic",
+        "prompt": "El Lissitzky and Alexander Rodchenko constructivist tradition applied to comics: stark diagonal compositional geometry, heroic worker and soldier silhouettes reduced to clean shapes, severe red-black-cream three-color palette maximum, propaganda-poster visual weight, woodblock print texture on every surface"
+      },
+      {
+        "name": "African Pattern",
+        "id": "african-pattern",
+        "prompt": "Pan-African comics tradition drawing on Kente, Ndebele, and Adinkra visual heritage: bold tribal geometry integrated into panel borders and environmental backgrounds, warm earth-ochre-terracotta palette, stylized human figures in everyday contexts, rhythmic repeating motifs as decorative framing and background texture"
+      },
+      {
+        "name": "Graphic Memoir",
+        "id": "graphic-memoir",
+        "prompt": "Autobiographical graphic memoir tradition: scratchy intimate linework with visible hand-tremor, raw black-ink wash expressiveness, claustrophobic first-person panel framing, emotional vulnerability encoded in anatomically imperfect self-portraiture, muted autobiographical color restraint"
+      },
+      {
+        "name": "Webtoon",
+        "id": "webtoon",
+        "prompt": "Korean digital webtoon format native aesthetic: phone-portrait-optimized infinite vertical canvas, cinematic horizontal establishing shots transitioning to close emotional beats, clean digital brushwork with precise line confidence, soft Korean drama atmospheric color grading, silence panels held longer than print would allow"
+      },
+      {
+        "name": "Sunday Funnies",
+        "id": "sunday-funnies",
+        "prompt": "Winsor McCay's Little Nemo and George Herriman's Krazy Kat tradition: full broadsheet horizontal strip with room to breathe, art nouveau decorative border flourishes, original watercolor Sunday edition fills, surreal slapstick staging with architectural environments as active participants, rounded nostalgic hand lettering"
+      },
+      {
+        "name": "Dia de Muertos",
+        "id": "dia-de-muertos",
+        "prompt": "José Guadalupe Posada's calavera tradition: skeleton figures with elaborately flower-adorned sugar-skull faces, deep marigold orange and royal purple palette, papel picado perforated tissue-paper lace motifs as panel borders and backgrounds, festive celebratory composition treating death as communal reunion"
+      },
+      {
+        "name": "Sprite Comic",
+        "id": "sprite-comic",
+        "prompt": "Early 2000s webcomic pixel-sprite tradition: 16-bit character sprites lifted from 1990s SNES and Sega console games, health bar and dialogue box HUD overlays, strict four-color per-character palette constraint, lo-fi charm weaponized for deadpan verbal humor, static poses carrying all comedic weight"
       }
     ]
   },
