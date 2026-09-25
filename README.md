@@ -8,70 +8,128 @@ LLMs create photos, comics, etc. as easily as unusual illustrations. [I prompted
 
 ## Generation
 
-`config.json` has the matrix of images and prompts. It is an object with keys:
+`config.json` is the matrix of images, styles, and models. Each generated image is named:
 
-- `images`: an array of image objects to draw, each with:
-  - `name`: display name of the image
-  - `id`: unique ID for the filename
-  - `prompt`: for the LLM to generate
-- `.styles`: an array of style objects to apply, each with:
-  - `name`: display name of the style
-  - `id`: unique ID for the filename
-  - `prompt`: for the LLM to generate
-- `models` on each category: list of model IDs to generate for that category
+```text
+<image-id>.<style-id>.<model-id>
+```
 
 We currently generate images using:
 
 - [`gpt-image-2`](https://developers.openai.com/api/docs/models/gpt-image-2) via OpenAI
-- [`gemini-3.1-flash-image-preview`](https://ai.google.dev/gemini-api/docs/image-generation) via Gemini API (nano-banana-2)
+- [`gpt-image-2.5-flare`](https://developers.openai.com/api/docs/models/gpt-image-2.5-flare) via OpenAI at medium quality
+- [`gemini-3.1-flash-image-preview`](https://ai.google.dev/gemini-api/docs/image-generation) via Gemini API (`nano-banana-2`)
 - [`gpt-image-1.5`](https://developers.openai.com/api/docs/models/gpt-image-1.5) via OpenAI
 - [`gpt-image-1`](https://developers.openai.com/api/docs/models/gpt-image-1) via OpenAI
-- [`gemini-2.5-flash-image`](https://ai.google.dev/gemini-api/docs/image-generation) via Gemini API (nano-banana)
+- [`gemini-2.5-flash-image`](https://ai.google.dev/gemini-api/docs/image-generation) via Gemini API (`nano-banana`)
 
-To generate images, run:
-
-```bash
-export OPENAI_API_KEY=...
-export GEMINI_API_KEY=...
-uv run generate_images.py
-
-# Convert images/*.png to images/*.webp at 25% size and maximum lossless compresion
-for f in images/*.png; do
-  [ -f "${f%.png}.webp" ] && continue
-  cwebp -lossless -m 6 -resize $(magick identify -format "%[fx:w*0.25]" "$f") $(magick identify -format "%[fx:h*0.25]" "$f") "$f" -o "${f%.png}.webp"
-  # Use identify if magick doesn't work
-  # cwebp -lossless -m 6 -resize $(identify -format "%[fx:w*0.25]" "$f") $(identify -format "%[fx:h*0.25]" "$f") "$f" -o "${f%.png}.webp"
-done
-```
-
-This creates `images/<image-id>.<style-id>.<model-id>.webp` for each image x style x configured-model combination.
-
-This is rendered by [`index.html`](index.html) and [`script.js`](script.js) as a static web site.
-
-## Deploy
-
-GitHub Releases has a 1,000-asset limit per release, so each top-level category has its own GitHub release tag and upload target:
-
-`art`, `comic`, `map`, `pop`, `text`, `text2`.
-
-The site loads images from the matching release tag for each category. Upload a category with:
+Run:
 
 ```bash
-./upload.sh map
+just build
 ```
 
-The uploader creates the release if needed and uploads only the PNGs allowed by that category's `models` list. For example, `map` only uploads `gpt-image-2`, `nano-banana-2`, and `gpt-image-1.5`.
+This runs `uv run generate_images.py`, which generates only missing PNG masters under:
 
-To upload every category in one pass, run:
+```text
+images/<image-id>.<style-id>.<model-id>.png
+```
+
+These PNGs are the source-of-truth masters. They are ignored by Git (`images/*.png`) and deployment never deletes them.
+
+## WebP files and deployment
+
+Run:
 
 ```bash
-./upload.sh
+just deploy
 ```
 
-To upload more than one category explicitly, pass multiple IDs:
+This runs `./upload.sh`. For every available PNG master it creates two different WebP files:
+
+| Purpose | Local path | Encoding | Stored on GitHub | Used by |
+| --- | --- | --- | --- | --- |
+| Thumbnail | `images/<name>.webp` | 25% dimensions, lossless WebP | Git repository / GitHub Pages | Main comparison grid and hover preview |
+| Full-size image | `.release-webp/<category>/<name>.webp` | Original dimensions, WebP quality 95, `-sharp_yuv` | GitHub Release for that category | Click/zoom modal |
+
+Here `<name>` is `<image-id>.<style-id>.<model-id>`.
+
+### Thumbnails
+
+`upload.sh` generates thumbnails with the equivalent of:
+
+```bash
+cwebp -lossless -m 6 -mt -resize <25%-width> <25%-height> input.png -o images/<name>.webp
+```
+
+The thumbnail WebPs live in `images/` and **are tracked by Git**. `script.js` loads them directly from GitHub Pages as:
+
+```text
+images/<image-id>.<style-id>.<model-id>.webp
+```
+
+`just deploy` creates or refreshes these files, but it does **not** commit or push them. After generating new images, commit and push the new/changed `images/*.webp` files normally for GitHub Pages to serve them.
+
+### Full-size / zoomed images
+
+`upload.sh` also creates a full-resolution cached WebP with the equivalent of:
+
+```bash
+cwebp -q 95 -m 6 -mt -sharp_yuv input.png -o .release-webp/<category>/<name>.webp
+```
+
+`.release-webp/` is ignored by Git. It is only a local cache so repeated deploys do not need to recompress unchanged PNGs.
+
+The full-size WebPs are uploaded directly by `upload.sh` using `gh release upload`. Each top-level category has its own GitHub Release/tag because GitHub Releases has a 1,000-asset limit per release:
+
+```text
+art  comic  map  pop  text  text2
+```
+
+For example:
+
+```text
+local master:
+  images/world.babylonian-tablet.gpt-image-2.webp      # thumbnail
+  images/world.babylonian-tablet.gpt-image-2.png       # retained master
+
+local full-size cache:
+  .release-webp/map/world.babylonian-tablet.gpt-image-2.webp
+
+GitHub Release asset:
+  https://github.com/sanand0/llmartstyle/releases/download/map/world.babylonian-tablet.gpt-image-2.webp
+```
+
+The modal in `script.js` constructs that Release URL when an image is opened.
+
+Deployment is incremental: existing thumbnails/cached WebPs are reused when newer than their PNG; only missing Release assets are uploaded. A legacy PNG asset on GitHub Releases is deleted only after its same-named `.webp` replacement has been confirmed there. **Local PNG masters are never deleted.**
+
+You can deploy selected categories directly:
 
 ```bash
 ./upload.sh pop art
+```
+
+Or run the complete local pipeline:
+
+```bash
+just build deploy
+```
+
+That means:
+
+1. Generate any missing PNG masters.
+2. Generate/update committed thumbnail WebPs in `images/`.
+3. Generate/update ignored full-size WebPs in `.release-webp/`.
+4. Upload missing full-size WebPs to the category GitHub Releases.
+5. Remove superseded PNG assets from GitHub Releases, but retain every local PNG master.
+
+To publish new thumbnails/config/site changes to GitHub Pages after that, commit and push them, for example:
+
+```bash
+git add config.json generate_images.py README.md images/*.webp
+git commit -m "Update generated images"
+git push
 ```
 
 ## License
