@@ -35,7 +35,7 @@ let currentCategoryId =
   paramCategory && categories[paramCategory] ? paramCategory : categoryIds[0];
 const currentCategory = categories[currentCategoryId];
 const models = currentCategory.models ?? defaultModels;
-const releasePngBase = `https://github.com/sanand0/llmartstyle/releases/download/${currentCategoryId}/`;
+const releaseWebpBase = `https://github.com/sanand0/llmartstyle/releases/download/${currentCategoryId}/`;
 
 const parseImageIds = (src) => {
   const pathname = new URL(src, location.href).pathname;
@@ -127,8 +127,8 @@ const setModalImage = (state) => {
   const image = currentCategory.images[state.imageIndex];
   const style = currentCategory.styles[state.styleIndex];
   const model = models[state.modelIndex];
-  const filename = `${image.id}.${style.id}.${model}.png`;
-  const src = `${releasePngBase}${filename}`;
+  const filename = `${image.id}.${style.id}.${model}.webp`;
+  const src = `${releaseWebpBase}${filename}`;
   modalLabel.textContent = modalImg.alt = `${model} — ${style.name}`;
   pendingModalSrc = src;
   setModalLoading(true);
