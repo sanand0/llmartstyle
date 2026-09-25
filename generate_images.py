@@ -47,11 +47,13 @@ def gemini(model: str, prompt: str) -> bytes:
         )
 
 
-def openai(model: str, prompt: str) -> bytes:
+def openai(model: str, prompt: str, quality: str | None = None) -> bytes:
     """Generate PNG bytes using the OpenAI image generation API."""
     api_key = os.environ["OPENAI_API_KEY"]
     url = "https://api.openai.com/v1/images/generations"
     payload: Dict[str, Any] = {"model": model, "prompt": prompt, "size": "1024x1024"}
+    if quality is not None:
+        payload["quality"] = quality
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
     r = httpx.post(url, headers=headers, json=payload, timeout=None)
     if r.status_code != 200:
@@ -70,18 +72,17 @@ def main() -> None:
 
     models: dict[str, Callable[[str], bytes]] = {
         "gpt-image-2": lambda p: openai("gpt-image-2", p),
+        "gpt-image-2.5-flare": lambda p: openai(
+            "gpt-image-2.5-flare", p, quality="medium"
+        ),
         "nano-banana-2": lambda p: gemini("gemini-3.1-flash-image-preview", p),
-        "nano-banana": lambda p: gemini("gemini-2.5-flash-image", p),
-        "gpt-image-1.5": lambda p: openai("gpt-image-1.5", p),
-        "gpt-image-1": lambda p: openai("gpt-image-1", p),
     }
-    all_model_names = list(models)
 
     image_root = Path("images")
     image_root.mkdir(exist_ok=True)
 
     for category_name, cfg in full_cfg.items():
-        category_models = cfg.get("models", all_model_names)
+        category_models = cfg["models"]
         unknown_models = sorted(set(category_models) - set(models))
         if unknown_models:
             raise ValueError(

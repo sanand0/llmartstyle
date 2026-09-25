@@ -2,13 +2,6 @@ import { bootstrapAlert } from "https://cdn.jsdelivr.net/npm/bootstrap-alert@1";
 import { html, render } from "https://cdn.jsdelivr.net/npm/lit-html@3/+esm";
 
 const $ = (s, el = document) => el.querySelector(s);
-const defaultModels = [
-  "gpt-image-2",
-  "nano-banana-2",
-  "nano-banana",
-  "gpt-image-1.5",
-  "gpt-image-1",
-]; // column = image, then model
 const thumbnailSize = 150;
 let modalState = null;
 let pendingModalSrc = "";
@@ -34,7 +27,7 @@ const paramCategory = params.get("category");
 let currentCategoryId =
   paramCategory && categories[paramCategory] ? paramCategory : categoryIds[0];
 const currentCategory = categories[currentCategoryId];
-const models = currentCategory.models ?? defaultModels;
+const models = currentCategory.models;
 const releaseWebpBase = `https://github.com/sanand0/llmartstyle/releases/download/${currentCategoryId}/`;
 
 const parseImageIds = (src) => {
@@ -42,7 +35,7 @@ const parseImageIds = (src) => {
   const filename = pathname
     .split("/")
     .pop()
-    .replace(/\.(webp|png)$/, "");
+    .replace(/\.webp$/, "");
   const [imageId, styleId, ...modelParts] = filename.split(".");
   const model = modelParts.join(".");
   return { imageId, styleId, model };

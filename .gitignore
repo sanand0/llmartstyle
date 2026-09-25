@@ -2,5 +2,3 @@
 images/*.png
 .env
 __pycache__/
-
-.release-webp/
