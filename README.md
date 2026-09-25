@@ -64,6 +64,7 @@ images/<image-id>.<style-id>.<model-id>.webp
 ```
 
 `just deploy` creates or refreshes them but does not commit them. Commit and push changed `images/*.webp` files to publish them on GitHub Pages.
+Before reusing a thumbnail, deployment verifies that its pixel dimensions are exactly one-quarter of its PNG master; a wrongly sized WebP is regenerated even if it is newer than the PNG.
 
 ### Full-size images
 

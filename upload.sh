@@ -45,11 +45,24 @@ for category in "${categories[@]}"; do
     stem="$(basename "${src%.png}")"
     thumb="images/$stem.webp"
 
+    read -r width height < <(identify -format '%w %h\n' "$src")
+    thumb_width=$(((width + 3) / 4))
+    thumb_height=$(((height + 3) / 4))
+    refresh_thumb=0
+
     if [[ ! -f "$thumb" || "$src" -nt "$thumb" ]]; then
-      read -r width height < <(identify -format '%w %h\n' "$src")
+      refresh_thumb=1
+    else
+      read -r current_width current_height < <(identify -format '%w %h\n' "$thumb")
+      if ((current_width != thumb_width || current_height != thumb_height)); then
+        refresh_thumb=1
+      fi
+    fi
+
+    if ((refresh_thumb)); then
       tmp="$thumb.tmp.$$"
       cwebp -quiet -lossless -m 6 -mt \
-        -resize "$(((width + 3) / 4))" "$(((height + 3) / 4))" \
+        -resize "$thumb_width" "$thumb_height" \
         "$src" -o "$tmp"
       mv "$tmp" "$thumb"
     fi

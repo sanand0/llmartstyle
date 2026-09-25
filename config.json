@@ -2,6 +2,7 @@
   "pop": {
     "models": [
       "gpt-image-2",
+      "gpt-image-2.5-flare",
       "nano-banana-2"
     ],
     "images": [
@@ -172,6 +173,7 @@
   "art": {
     "models": [
       "gpt-image-2",
+      "gpt-image-2.5-flare",
       "nano-banana-2"
     ],
     "images": [
@@ -372,6 +374,7 @@
   "comic": {
     "models": [
       "gpt-image-2",
+      "gpt-image-2.5-flare",
       "nano-banana-2"
     ],
     "images": [
@@ -637,6 +640,7 @@
   "text": {
     "models": [
       "gpt-image-2",
+      "gpt-image-2.5-flare",
       "nano-banana-2"
     ],
     "images": [
@@ -807,6 +811,7 @@
   "text2": {
     "models": [
       "gpt-image-2",
+      "gpt-image-2.5-flare",
       "nano-banana-2"
     ],
     "images": [
@@ -902,6 +907,7 @@
   "map": {
     "models": [
       "gpt-image-2",
+      "gpt-image-2.5-flare",
       "nano-banana-2"
     ],
     "images": [
